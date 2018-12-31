@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 16.5, 23.625" name="HotelesBDD">
+  <DataContextMoniker Name="/HotelesBDDDataContext" />
+  <nestedChildShapes>
+    <classShape Id="6e947237-0dec-47f2-9448-ac78d95fda1e" absoluteBounds="6.25, 6.5, 2, 2.5401025390624996">
+      <DataClassMoniker Name="/HotelesBDDDataContext/tbl_alquiler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="adb142e7-c584-42be-8a16-579c31ba9dae" absoluteBounds="6.265, 6.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a5eefcd2-e790-49b8-9092-58eae398151a" absoluteBounds="8.75, 11.625, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/HotelesBDDDataContext/tbl_categoria_producto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dfd8293d-1ce0-42d9-99d1-6c8ab72356cc" absoluteBounds="8.765, 12.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0ac6f3d4-9caf-4737-8861-bd3998374b61" absoluteBounds="6.25, 17.375, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/HotelesBDDDataContext/tbl_comprobante" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d1293dd4-ebea-41ca-a492-8a8e705c0a72" absoluteBounds="6.265, 17.835, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5dfa8f03-fec6-4484-892b-2d9b7202c549" absoluteBounds="9, 6.625, 2, 2.1554996744791657">
+      <DataClassMoniker Name="/HotelesBDDDataContext/tbl_detalle_alquiler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9267ce4a-c1c7-473b-b833-ef609eeaeae7" absoluteBounds="9.015, 7.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="66549fde-21c1-4c5a-9803-72ac33894630" absoluteBounds="14.25, 16.75, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/HotelesBDDDataContext/tbl_detalle_pedido" />
+      <nestedChildShapes>
+        <elementListCompartment Id="589889b2-16a0-4aac-9a8c-a7d12d1c441e" absoluteBounds="14.265, 17.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d3355b00-26fa-4c9d-a4c3-5967443006ac" absoluteBounds="14.25, 11.25, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/HotelesBDDDataContext/tbl_detalle_producto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1d93b233-1b2a-4832-af8d-4261739d780d" absoluteBounds="14.265, 11.71, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2cb112f5-8ce6-4920-a2bf-2da78365c1a1" absoluteBounds="11.75, 1.5, 2, 1.1939925130208338">
+      <DataClassMoniker Name="/HotelesBDDDataContext/tbl_disponibilidad" />
+      <nestedChildShapes>
+        <elementListCompartment Id="887befe5-e549-4b9b-9599-4dab6beb8f1c" absoluteBounds="11.765, 1.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="55f79923-7377-4620-abc7-04ed6e966068" absoluteBounds="6.25, 12.375, 2, 2.5401025390624987">
+      <DataClassMoniker Name="/HotelesBDDDataContext/tbl_habitacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="38f0b6d9-3499-460e-b30d-9aed628acea8" absoluteBounds="6.265, 12.835, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f7b1bd3b-b123-44ed-a524-62e6336f3385" absoluteBounds="3.5, 13.625, 2, 2.7324039713541683">
+      <DataClassMoniker Name="/HotelesBDDDataContext/tbl_hotel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d863b77d-d967-4bb3-a23c-8e6bed1823c3" absoluteBounds="3.515, 14.085, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="df9aeb7a-62fc-41c1-b6c6-7fee1d97dc53" absoluteBounds="0.75, 3.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/HotelesBDDDataContext/tbl_identificacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a98e93bb-ee5f-4512-9df5-bbe9cb721c8e" absoluteBounds="0.765, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="23da5098-d7bd-40e5-a852-d3f2342af6dc" absoluteBounds="8.75, 21.625, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/HotelesBDDDataContext/tbl_marca_producto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="46739ebd-9777-46d8-828f-8c60a8fd4807" absoluteBounds="8.765, 22.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e258298a-4682-4e85-8f71-e5b2ae6243ac" absoluteBounds="11.5, 15.5, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/HotelesBDDDataContext/tbl_pedido" />
+      <nestedChildShapes>
+        <elementListCompartment Id="01d28ddc-325f-407a-8182-e40c3ebf557c" absoluteBounds="11.515, 15.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1587505b-03d5-4604-8b41-cb30bfd485f4" absoluteBounds="3.5, 2.75, 2, 3.6939111328124996">
+      <DataClassMoniker Name="/HotelesBDDDataContext/tbl_persona" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1115c4b9-f423-4280-8460-c17425b24624" absoluteBounds="3.515, 3.21, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0394ad92-cf55-47bc-9bdc-7478c1854f9b" absoluteBounds="11.5, 10.75, 2, 3.5016097005208309">
+      <DataClassMoniker Name="/HotelesBDDDataContext/tbl_producto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="90c56f81-8304-47f1-96b9-1c75a53c02a7" absoluteBounds="11.515, 11.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c81fd327-f913-4532-b36b-ea8a0e079cc5" absoluteBounds="0.75, 14.125, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/HotelesBDDDataContext/tbl_provincia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7c60b5c1-0c1b-4baa-97df-8194ac0deb5c" absoluteBounds="0.765, 14.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="eebf7f26-95d9-41fe-a405-5a041cf263b4" absoluteBounds="9, 2.5, 2, 2.3478011067708326">
+      <DataClassMoniker Name="/HotelesBDDDataContext/tbl_reservacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="92a4a3c8-4f7d-453a-9e7c-aaa66fd5bca3" absoluteBounds="9.015, 2.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e7a06aef-9f98-41e9-8009-7db74531a142" absoluteBounds="3.5, 7.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/HotelesBDDDataContext/tbl_rol" />
+      <nestedChildShapes>
+        <elementListCompartment Id="81f43714-aa5e-49a0-9e1b-aaedfcc05796" absoluteBounds="3.515, 8.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cfceb6d5-3d2c-47ae-a81f-44480bebc0d3" absoluteBounds="3.5, 17.875, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/HotelesBDDDataContext/tbl_tipo_comprobante" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f71c8340-42e7-40e4-ab1b-9ba49e9a21f8" absoluteBounds="3.515, 18.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="98455960-2776-485a-a0fc-1429ccddecff" absoluteBounds="3.5, 10.875, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/HotelesBDDDataContext/tbl_tipo_habitacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="19bf50b5-6d7e-46d4-9345-2bd089ce17f9" absoluteBounds="3.515, 11.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="32c18854-7dbe-489e-9824-a34dc0b3723c" absoluteBounds="0.75, 0.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/HotelesBDDDataContext/tbl_tipo_persona" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d8eeb38c-6e98-4fde-bd19-a1c87ab669cd" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9cc6e1b6-45bc-4ffa-8615-ecf9d52ebbcc" absoluteBounds="6.25, 2.5, 2, 2.3478011067708326">
+      <DataClassMoniker Name="/HotelesBDDDataContext/tbl_usuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="da22f5e0-3d81-4bc4-9427-186f741b42d3" absoluteBounds="6.265, 2.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.25 : 7.70274983723958); (8.41666666666667 : 7.70274983723958 : JumpStart); (8.58333333333333 : 7.70274983723958 : JumpEnd); (9 : 7.70274983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HotelesBDDDataContext/tbl_alquiler/tbl_alquiler_tbl_detalle_alquiler" />
+      <nodes>
+        <classShapeMoniker Id="6e947237-0dec-47f2-9448-ac78d95fda1e" />
+        <classShapeMoniker Id="5dfa8f03-fec6-4484-892b-2d9b7202c549" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 18.7412019856771); (10.90625 : 18.7412019856771); (10.90625 : 8.78049967447917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HotelesBDDDataContext/tbl_comprobante/tbl_comprobante_tbl_detalle_alquiler" />
+      <nodes>
+        <classShapeMoniker Id="0ac6f3d4-9caf-4737-8861-bd3998374b61" />
+        <classShapeMoniker Id="5dfa8f03-fec6-4484-892b-2d9b7202c549" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 18.1194482421875); (10.8229166666667 : 18.1194482421875 : JumpStart); (10.9895833333333 : 18.1194482421875 : JumpEnd); (11.0416666666667 : 18.1194482421875 : JumpStart); (11.2083333333333 : 18.1194482421875 : JumpEnd); (14.25 : 18.1194482421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HotelesBDDDataContext/tbl_comprobante/tbl_comprobante_tbl_detalle_pedido" />
+      <nodes>
+        <classShapeMoniker Id="0ac6f3d4-9caf-4737-8861-bd3998374b61" />
+        <classShapeMoniker Id="66549fde-21c1-4c5a-9803-72ac33894630" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 14.1867496744792); (10.8749975 : 14.1867496744792); (10.8749975 : 8.78049967447917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HotelesBDDDataContext/tbl_habitacion/tbl_habitacion_tbl_detalle_alquiler" />
+      <nodes>
+        <classShapeMoniker Id="55f79923-7377-4620-abc7-04ed6e966068" />
+        <classShapeMoniker Id="5dfa8f03-fec6-4484-892b-2d9b7202c549" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 14.2700512695312); (6.25 : 14.2700512695312)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HotelesBDDDataContext/tbl_hotel/tbl_hotel_tbl_habitacion" />
+      <nodes>
+        <classShapeMoniker Id="f7b1bd3b-b123-44ed-a524-62e6336f3385" />
+        <classShapeMoniker Id="55f79923-7377-4620-abc7-04ed6e966068" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.5 : 17.1065991210938); (14.25 : 17.1065991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HotelesBDDDataContext/tbl_pedido/tbl_pedido_tbl_detalle_pedido" />
+      <nodes>
+        <classShapeMoniker Id="e258298a-4682-4e85-8f71-e5b2ae6243ac" />
+        <classShapeMoniker Id="66549fde-21c1-4c5a-9803-72ac33894630" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.5 : 15.5); (13.875 : 15.125); (13.875 : 12.4239005533854); (14.25 : 12.4239005533854)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HotelesBDDDataContext/tbl_pedido/tbl_pedido_tbl_detalle_producto" />
+      <nodes>
+        <classShapeMoniker Id="e258298a-4682-4e85-8f71-e5b2ae6243ac" />
+        <classShapeMoniker Id="d3355b00-26fa-4c9d-a4c3-5967443006ac" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 6.4439111328125); (5.875 : 6.8189111328125); (5.875 : 6.125); (6.00357443490112 : 6.25357443490112 : JumpStart); (6.12142556509888 : 6.37142556509888 : JumpEnd); (6.25 : 6.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HotelesBDDDataContext/tbl_persona/tbl_persona_tbl_alquiler" />
+      <nodes>
+        <classShapeMoniker Id="1587505b-03d5-4604-8b41-cb30bfd485f4" />
+        <classShapeMoniker Id="6e947237-0dec-47f2-9448-ac78d95fda1e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.63544840494792); (3.5 : 4.63544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HotelesBDDDataContext/tbl_identificacion/tbl_identificacion_tbl_persona" />
+      <nodes>
+        <classShapeMoniker Id="df9aeb7a-62fc-41c1-b6c6-7fee1d97dc53" />
+        <classShapeMoniker Id="1587505b-03d5-4604-8b41-cb30bfd485f4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.5 : 11.7744502766927); (14.25 : 11.7744502766927)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HotelesBDDDataContext/tbl_producto/tbl_producto_tbl_detalle_producto" />
+      <nodes>
+        <classShapeMoniker Id="0394ad92-cf55-47bc-9bdc-7478c1854f9b" />
+        <classShapeMoniker Id="d3355b00-26fa-4c9d-a4c3-5967443006ac" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 12.5104484049479); (10.7916641666667 : 12.5104484049479 : JumpStart); (10.9895833333333 : 12.5104484049479 : JumpEnd); (11.0416666666667 : 12.5104484049479 : JumpStart); (11.2083333333333 : 12.5104484049479 : JumpEnd); (11.5 : 12.5104484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HotelesBDDDataContext/tbl_categoria_producto/tbl_categoria_producto_tbl_producto" />
+      <nodes>
+        <classShapeMoniker Id="a5eefcd2-e790-49b8-9092-58eae398151a" />
+        <classShapeMoniker Id="0394ad92-cf55-47bc-9bdc-7478c1854f9b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 21.625); (11.125 : 21.25); (11.125 : 11.598972202474); (11.5 : 11.598972202474)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HotelesBDDDataContext/tbl_marca_producto/tbl_marca_producto_tbl_producto" />
+      <nodes>
+        <classShapeMoniker Id="23da5098-d7bd-40e5-a852-d3f2342af6dc" />
+        <classShapeMoniker Id="0394ad92-cf55-47bc-9bdc-7478c1854f9b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 15.0104484049479); (3.5 : 15.0104484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HotelesBDDDataContext/tbl_provincia/tbl_provincia_tbl_hotel" />
+      <nodes>
+        <classShapeMoniker Id="c81fd327-f913-4532-b36b-ea8a0e079cc5" />
+        <classShapeMoniker Id="f7b1bd3b-b123-44ed-a524-62e6336f3385" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.25 : 12.375); (7.25 : 9.2901025390625); (8.5 : 9.2901025390625); (8.5 : 3.67390055338542); (9 : 3.67390055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HotelesBDDDataContext/tbl_habitacion/tbl_habitacion_tbl_reservacion" />
+      <nodes>
+        <classShapeMoniker Id="55f79923-7377-4620-abc7-04ed6e966068" />
+        <classShapeMoniker Id="eebf7f26-95d9-41fe-a405-5a041cf263b4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 18.7604484049479); (6.25 : 18.7604484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HotelesBDDDataContext/tbl_tipo_comprobante/tbl_tipo_comprobante_tbl_comprobante" />
+      <nodes>
+        <classShapeMoniker Id="cfceb6d5-3d2c-47ae-a81f-44480bebc0d3" />
+        <classShapeMoniker Id="0ac6f3d4-9caf-4737-8861-bd3998374b61" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 12.6065991210937); (6.25 : 12.6065991210937)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HotelesBDDDataContext/tbl_tipo_habitacion/tbl_tipo_habitacion_tbl_habitacion" />
+      <nodes>
+        <classShapeMoniker Id="98455960-2776-485a-a0fc-1429ccddecff" />
+        <classShapeMoniker Id="55f79923-7377-4620-abc7-04ed6e966068" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.63544840494792); (4.5 : 1.63544840494792); (4.5 : 2.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HotelesBDDDataContext/tbl_tipo_persona/tbl_tipo_persona_tbl_persona" />
+      <nodes>
+        <classShapeMoniker Id="32c18854-7dbe-489e-9824-a34dc0b3723c" />
+        <classShapeMoniker Id="1587505b-03d5-4604-8b41-cb30bfd485f4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 3.02445027669271); (9 : 3.02445027669271)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HotelesBDDDataContext/tbl_usuario/tbl_usuario_tbl_reservacion" />
+      <nodes>
+        <classShapeMoniker Id="9cc6e1b6-45bc-4ffa-8615-ecf9d52ebbcc" />
+        <classShapeMoniker Id="eebf7f26-95d9-41fe-a405-5a041cf263b4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 3.79890055338542); (5.97916666666667 : 3.79890055338542 : JumpStart); (6.14583333333333 : 3.79890055338542 : JumpEnd); (6.25 : 3.79890055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HotelesBDDDataContext/tbl_persona/tbl_persona_tbl_usuario" />
+      <nodes>
+        <classShapeMoniker Id="1587505b-03d5-4604-8b41-cb30bfd485f4" />
+        <classShapeMoniker Id="9cc6e1b6-45bc-4ffa-8615-ecf9d52ebbcc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 7.8112992741887); (6.0625 : 7.2487992741887); (6.0625 : 3.11819827669271); (6.25 : 3.11819827669271)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HotelesBDDDataContext/tbl_rol/tbl_rol_tbl_usuario" />
+      <nodes>
+        <classShapeMoniker Id="e7a06aef-9f98-41e9-8009-7db74531a142" />
+        <classShapeMoniker Id="9cc6e1b6-45bc-4ffa-8615-ecf9d52ebbcc" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

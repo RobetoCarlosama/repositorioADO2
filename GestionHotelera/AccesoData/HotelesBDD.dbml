@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="gestionHotelera" Class="HotelesBDDDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=gestionHotelera;Integrated Security=True" SettingsObjectName="AccesoData.Properties.Settings" SettingsPropertyName="gestionHoteleraConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbl_alquiler" Member="tbl_alquilers">
+    <Type Name="tbl_alquiler">
+      <Column Name="id_alquiler" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_persona" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fechaentrada_alquiler" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="horaentrada_alquiler" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechasalida_alquiler" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="horasalida_alquiler" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="creacion_alquiler" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="actualizacion_alquiler" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="estado_alquiler" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="tbl_alquiler_tbl_detalle_alquiler" Member="tbl_detalle_alquilers" ThisKey="id_alquiler" OtherKey="id_alquiler" Type="tbl_detalle_alquiler" />
+      <Association Name="tbl_persona_tbl_alquiler" Member="tbl_persona" ThisKey="id_persona" OtherKey="id_persona" Type="tbl_persona" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_categoria_producto" Member="tbl_categoria_productos">
+    <Type Name="tbl_categoria_producto">
+      <Column Name="id_categoriaproducto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descripcion_categoriaproducto" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="creacion_categoriaproducto" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="actualizacion_categoriaproducto" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="estado_categoriaproducto" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="tbl_categoria_producto_tbl_producto" Member="tbl_productos" ThisKey="id_categoriaproducto" OtherKey="id_categoriaproducto" Type="tbl_producto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_comprobante" Member="tbl_comprobantes">
+    <Type Name="tbl_comprobante">
+      <Column Name="id_comprobante" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_tipocomprobante" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="numero_comprobante" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fecha_comprobante" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="subtotal_comprobante" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="iva_comprobante" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="total_comprobante" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="creacion_comprobante" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="actualizacion_comprobante" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="estado_comprobante" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="tbl_comprobante_tbl_detalle_alquiler" Member="tbl_detalle_alquilers" ThisKey="id_comprobante" OtherKey="id_comprobante" Type="tbl_detalle_alquiler" />
+      <Association Name="tbl_comprobante_tbl_detalle_pedido" Member="tbl_detalle_pedidos" ThisKey="id_comprobante" OtherKey="id_comprobante" Type="tbl_detalle_pedido" />
+      <Association Name="tbl_tipo_comprobante_tbl_comprobante" Member="tbl_tipo_comprobante" ThisKey="id_tipocomprobante" OtherKey="id_tipocomprobante" Type="tbl_tipo_comprobante" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_detalle_alquiler" Member="tbl_detalle_alquilers">
+    <Type Name="tbl_detalle_alquiler">
+      <Column Name="id_detallealquiler" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_habitacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_comprobante" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_alquiler" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="creacion_detallealquiler" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="actualizacion_detallealquiler" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="estado_detallealquiler" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="tbl_alquiler_tbl_detalle_alquiler" Member="tbl_alquiler" ThisKey="id_alquiler" OtherKey="id_alquiler" Type="tbl_alquiler" IsForeignKey="true" />
+      <Association Name="tbl_comprobante_tbl_detalle_alquiler" Member="tbl_comprobante" ThisKey="id_comprobante" OtherKey="id_comprobante" Type="tbl_comprobante" IsForeignKey="true" />
+      <Association Name="tbl_habitacion_tbl_detalle_alquiler" Member="tbl_habitacion" ThisKey="id_habitacion" OtherKey="id_habitacion" Type="tbl_habitacion" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_detalle_pedido" Member="tbl_detalle_pedidos">
+    <Type Name="tbl_detalle_pedido">
+      <Column Name="id_detallepedido" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_pedido" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_comprobante" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="creacion_detallepedido" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="actualizacion_detallepedido" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="estado_detallepedido" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="tbl_comprobante_tbl_detalle_pedido" Member="tbl_comprobante" ThisKey="id_comprobante" OtherKey="id_comprobante" Type="tbl_comprobante" IsForeignKey="true" />
+      <Association Name="tbl_pedido_tbl_detalle_pedido" Member="tbl_pedido" ThisKey="id_pedido" OtherKey="id_pedido" Type="tbl_pedido" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_detalle_producto" Member="tbl_detalle_productos">
+    <Type Name="tbl_detalle_producto">
+      <Column Name="id_detalleproducto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_pedido" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_producto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cantidad_detalleproducto" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="precio_detalleproducto" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="creacion_detalleproducto" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="actualizacion_detalleproducto" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="estado_detalleproducto" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="tbl_pedido_tbl_detalle_producto" Member="tbl_pedido" ThisKey="id_pedido" OtherKey="id_pedido" Type="tbl_pedido" IsForeignKey="true" />
+      <Association Name="tbl_producto_tbl_detalle_producto" Member="tbl_producto" ThisKey="id_producto" OtherKey="id_producto" Type="tbl_producto" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_disponibilidad" Member="tbl_disponibilidads">
+    <Type Name="tbl_disponibilidad">
+      <Column Name="idDidponibilidad" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="descripcionDisponibilidad" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_habitacion" Member="tbl_habitacions">
+    <Type Name="tbl_habitacion">
+      <Column Name="id_habitacion" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_tipohabitacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_hotel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="numero_habitacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ubicacion_habitacion" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="disponibilidad_habitacion" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="cracion_habitacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="actualizacion_habitacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="estado_habitacion" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="tbl_habitacion_tbl_detalle_alquiler" Member="tbl_detalle_alquilers" ThisKey="id_habitacion" OtherKey="id_habitacion" Type="tbl_detalle_alquiler" />
+      <Association Name="tbl_habitacion_tbl_reservacion" Member="tbl_reservacions" ThisKey="id_habitacion" OtherKey="id_habitacion" Type="tbl_reservacion" />
+      <Association Name="tbl_hotel_tbl_habitacion" Member="tbl_hotel" ThisKey="id_hotel" OtherKey="id_hotel" Type="tbl_hotel" IsForeignKey="true" />
+      <Association Name="tbl_tipo_habitacion_tbl_habitacion" Member="tbl_tipo_habitacion" ThisKey="id_tipohabitacion" OtherKey="id_tipohabitacion" Type="tbl_tipo_habitacion" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_hotel" Member="tbl_hotels">
+    <Type Name="tbl_hotel">
+      <Column Name="id_hotel" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_provincia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nombre_hotel" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="ruc_hotel" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="direccion_hotel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="telefono_hotel" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="email_hotel" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="creacion_hotel" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="actualizacion_hotel" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="estado_hotel" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="tbl_hotel_tbl_habitacion" Member="tbl_habitacions" ThisKey="id_hotel" OtherKey="id_hotel" Type="tbl_habitacion" />
+      <Association Name="tbl_provincia_tbl_hotel" Member="tbl_provincia" ThisKey="id_provincia" OtherKey="id_provincia" Type="tbl_provincia" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_identificacion" Member="tbl_identificacions">
+    <Type Name="tbl_identificacion">
+      <Column Name="id_identificacion" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descripcion_identificacion" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="creacion_identificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="actualizacion_identificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="estado_identificacion" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="tbl_identificacion_tbl_persona" Member="tbl_personas" ThisKey="id_identificacion" OtherKey="id_identificacion" Type="tbl_persona" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_marca_producto" Member="tbl_marca_productos">
+    <Type Name="tbl_marca_producto">
+      <Column Name="id_marcaproducto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descripcion_marcaproducto" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="creacion_marcaproducto" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="actualizacion_marcaproducto" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="estado_marcaproducto" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="tbl_marca_producto_tbl_producto" Member="tbl_productos" ThisKey="id_marcaproducto" OtherKey="id_marcaproducto" Type="tbl_producto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_pedido" Member="tbl_pedidos">
+    <Type Name="tbl_pedido">
+      <Column Name="id_pedido" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fecha_pedido" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="usuario_pedido" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="creacion_pedido" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="actualizacion_pedido" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="estado_pedido" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="tbl_pedido_tbl_detalle_pedido" Member="tbl_detalle_pedidos" ThisKey="id_pedido" OtherKey="id_pedido" Type="tbl_detalle_pedido" />
+      <Association Name="tbl_pedido_tbl_detalle_producto" Member="tbl_detalle_productos" ThisKey="id_pedido" OtherKey="id_pedido" Type="tbl_detalle_producto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_persona" Member="tbl_personas">
+    <Type Name="tbl_persona">
+      <Column Name="id_persona" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_identificacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_tipopersona" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="numero_identificacionpersona" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="apellido1_persona" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="apellido2_persona" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="nombre1_persona" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="nombre2_persona" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="direccion_persona" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="celular_persona" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="telefono_persona" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="email_persona" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="creacion_persona" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="actualizacion_persona" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="estado_persona" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="tbl_persona_tbl_alquiler" Member="tbl_alquilers" ThisKey="id_persona" OtherKey="id_persona" Type="tbl_alquiler" />
+      <Association Name="tbl_persona_tbl_usuario" Member="tbl_usuarios" ThisKey="id_persona" OtherKey="id_persona" Type="tbl_usuario" />
+      <Association Name="tbl_identificacion_tbl_persona" Member="tbl_identificacion" ThisKey="id_identificacion" OtherKey="id_identificacion" Type="tbl_identificacion" IsForeignKey="true" />
+      <Association Name="tbl_tipo_persona_tbl_persona" Member="tbl_tipo_persona" ThisKey="id_tipopersona" OtherKey="id_tipopersona" Type="tbl_tipo_persona" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_producto" Member="tbl_productos">
+    <Type Name="tbl_producto">
+      <Column Name="id_producto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_marcaproducto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_categoriaproducto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="codigo_producto" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="descripcion_producto" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="lote_producto" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="elaboracion_producto" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="vencimiento_producto" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="precio_producto" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="stock_producto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="regsan_producto" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="creacio_producto" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="actualizacion_producto" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="estado_producto" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="tbl_producto_tbl_detalle_producto" Member="tbl_detalle_productos" ThisKey="id_producto" OtherKey="id_producto" Type="tbl_detalle_producto" />
+      <Association Name="tbl_categoria_producto_tbl_producto" Member="tbl_categoria_producto" ThisKey="id_categoriaproducto" OtherKey="id_categoriaproducto" Type="tbl_categoria_producto" IsForeignKey="true" />
+      <Association Name="tbl_marca_producto_tbl_producto" Member="tbl_marca_producto" ThisKey="id_marcaproducto" OtherKey="id_marcaproducto" Type="tbl_marca_producto" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_provincia" Member="tbl_provincias">
+    <Type Name="tbl_provincia">
+      <Column Name="id_provincia" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descripcion_provincia" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="creacion_provincia" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="actualizacion_provincia" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="estado_provincia" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="tbl_provincia_tbl_hotel" Member="tbl_hotels" ThisKey="id_provincia" OtherKey="id_provincia" Type="tbl_hotel" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_reservacion" Member="tbl_reservacions">
+    <Type Name="tbl_reservacion">
+      <Column Name="id_reservacion" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_habitacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_usuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fechaentrada_reservacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechasalida_reservacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="creacion_reservacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="actualizacion_reservacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="estado_reservacion" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="tbl_habitacion_tbl_reservacion" Member="tbl_habitacion" ThisKey="id_habitacion" OtherKey="id_habitacion" Type="tbl_habitacion" IsForeignKey="true" />
+      <Association Name="tbl_usuario_tbl_reservacion" Member="tbl_usuario" ThisKey="id_usuario" OtherKey="id_usuario" Type="tbl_usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_rol" Member="tbl_rols">
+    <Type Name="tbl_rol">
+      <Column Name="id_rol" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descripcion_rol" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="creacion_rol" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="actualizacion_rol" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="estado_rol" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="tbl_rol_tbl_usuario" Member="tbl_usuarios" ThisKey="id_rol" OtherKey="id_rol" Type="tbl_usuario" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_tipo_comprobante" Member="tbl_tipo_comprobantes">
+    <Type Name="tbl_tipo_comprobante">
+      <Column Name="id_tipocomprobante" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descripcion_tipocomprobante" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="creacion_tipocomprobante" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="actualizacion_tipocomprobante" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="estado_tipocomprobante" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="tbl_tipo_comprobante_tbl_comprobante" Member="tbl_comprobantes" ThisKey="id_tipocomprobante" OtherKey="id_tipocomprobante" Type="tbl_comprobante" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_tipo_habitacion" Member="tbl_tipo_habitacions">
+    <Type Name="tbl_tipo_habitacion">
+      <Column Name="id_tipohabitacion" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descripcion_tipohabitacion" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="precio_tipohabitacion" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="creacion_tipohabitacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="actualizacion_tipohabitacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="estado_tipohabitacion" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="tbl_tipo_habitacion_tbl_habitacion" Member="tbl_habitacions" ThisKey="id_tipohabitacion" OtherKey="id_tipohabitacion" Type="tbl_habitacion" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_tipo_persona" Member="tbl_tipo_personas">
+    <Type Name="tbl_tipo_persona">
+      <Column Name="id_tipopersona" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descripcion_tipopersona" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="creacion_tipopersona" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="actualizacion_tipopersona" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="estado_tipopersona" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="tbl_tipo_persona_tbl_persona" Member="tbl_personas" ThisKey="id_tipopersona" OtherKey="id_tipopersona" Type="tbl_persona" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_usuario" Member="tbl_usuarios">
+    <Type Name="tbl_usuario">
+      <Column Name="id_usuario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_persona" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_rol" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nick_usuario" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="clave_usuario" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="creacion_usuario" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="actualizacion_usuario" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="estado_usuario" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="tbl_usuario_tbl_reservacion" Member="tbl_reservacions" ThisKey="id_usuario" OtherKey="id_usuario" Type="tbl_reservacion" />
+      <Association Name="tbl_persona_tbl_usuario" Member="tbl_persona" ThisKey="id_persona" OtherKey="id_persona" Type="tbl_persona" IsForeignKey="true" />
+      <Association Name="tbl_rol_tbl_usuario" Member="tbl_rol" ThisKey="id_rol" OtherKey="id_rol" Type="tbl_rol" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
