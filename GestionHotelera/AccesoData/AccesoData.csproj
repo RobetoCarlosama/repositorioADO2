@@ -42,11 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DSreportes.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DSreportes.xsd</DependentUpon>
-    </Compile>
     <Compile Include="HotelesBDD.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -61,17 +56,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="DSreportes.xsc">
-      <DependentUpon>DSreportes.xsd</DependentUpon>
-    </None>
-    <None Include="DSreportes.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DSreportes.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DSreportes.xss">
-      <DependentUpon>DSreportes.xsd</DependentUpon>
-    </None>
     <None Include="HotelesBDD.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>HotelesBDD.designer.cs</LastGenOutput>

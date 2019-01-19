@@ -28,7 +28,7 @@
                         <InsertItemTemplate>
                             <asp:TextBox ID="TextBox1" runat="server" MaxLength="30" Text='<%# Bind("descripcion_tipohabitacion") %>'></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Tipo habitación, campo requerido" ForeColor="Red">*</asp:RequiredFieldValidator>
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Solo letras MAYÚSC" ForeColor="Blue" ValidationExpression="[A-Z ]*">*</asp:RegularExpressionValidator>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Solo letras MAYÚSC" ForeColor="Blue" ValidationExpression="[A-Z]*">*</asp:RegularExpressionValidator>
                         </InsertItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="Label1" runat="server" Text='<%# Bind("descripcion_tipohabitacion") %>'></asp:Label>
@@ -40,8 +40,8 @@
                         </EditItemTemplate>
                         <InsertItemTemplate>
                             <asp:TextBox ID="TextBox2" runat="server" MaxLength="10" Text='<%# Bind("precio_tipohabitacion") %>'></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="Precio, campo requerido" ForeColor="Red">*</asp:RequiredFieldValidator>
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="Solo números" ForeColor="Blue" ValidationExpression="^(0|[0-9]\d*)$">*</asp:RegularExpressionValidator>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="Precio, campo requerido 00.00" ForeColor="Red">*</asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="Solo números 00.00" ForeColor="Blue" ValidationExpression="^(\d|-)?(\d|,)*\.?\d*$">*</asp:RegularExpressionValidator>
                             <asp:ValidationSummary ID="ValidationSummary1" runat="server" ShowMessageBox="True" ShowSummary="False" />
                         </InsertItemTemplate>
                         <ItemTemplate>
@@ -130,8 +130,8 @@
                     <asp:TemplateField HeaderText="descripción" SortExpression="descripcion_tipohabitacion">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox1" runat="server" MaxLength="30" Text='<%# Bind("descripcion_tipohabitacion") %>'></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBox1" ErrorMessage="Tipo habitación, campo requerido" ForeColor="Red" ValidationGroup="actualizaTipoHabitacion"></asp:RequiredFieldValidator>
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="TextBox1" ErrorMessage="Solo letras MAYÚSC" ForeColor="Blue" ValidationExpression="[A-Z ]*" ValidationGroup="actualizaTipoHabitacion"></asp:RegularExpressionValidator>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBox1" ErrorMessage="Tipo habitación, campo requerido" ForeColor="Red" ValidationGroup="actualizaTipoHabitacion">*</asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="TextBox1" ErrorMessage="Solo letras MAYÚSC" ForeColor="Blue" ValidationExpression="[A-Z]*" ValidationGroup="actualizaTipoHabitacion">*</asp:RegularExpressionValidator>
                         </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="Label1" runat="server" Text='<%# Bind("descripcion_tipohabitacion") %>'></asp:Label>
@@ -140,8 +140,9 @@
                     <asp:TemplateField HeaderText="precio" SortExpression="precio_tipohabitacion">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox2" runat="server" MaxLength="10" Text='<%# Bind("precio_tipohabitacion") %>'></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="TextBox2" ErrorMessage="Precio, campo requerido" ForeColor="Red" ValidationGroup="actualizaTipoHabitacion"></asp:RequiredFieldValidator>
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="TextBox2" ErrorMessage="Solo números" ForeColor="Blue" ValidationExpression="^(0|[0-9]\d*)$" ValidationGroup="actualizaTipoHabitacion"></asp:RegularExpressionValidator>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="TextBox2" ErrorMessage="Precio, campo requerido 00.00" ForeColor="Red" ValidationGroup="actualizaTipoHabitacion">*</asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="TextBox2" ErrorMessage="Solo números 00.00" ForeColor="Blue" ValidationExpression="^(\d|-)?(\d|,)*\.?\d*$" ValidationGroup="actualizaTipoHabitacion">*</asp:RegularExpressionValidator>
+                            <asp:ValidationSummary ID="ValidationSummary2" runat="server" ValidationGroup="actualizaTipoHabitacion" ShowMessageBox="True" ShowSummary="False" />
                         </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="Label2" runat="server" Text='<%# Bind("precio_tipohabitacion") %>'></asp:Label>

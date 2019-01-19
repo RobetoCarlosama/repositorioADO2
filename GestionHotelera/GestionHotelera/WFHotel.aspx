@@ -27,8 +27,10 @@
                         </EditItemTemplate>
                         <InsertItemTemplate>
                             <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="sqldsListarProvincias" DataTextField="descripcion_provincia" DataValueField="id_provincia" Width="100%" SelectedValue='<%# Bind("id_provincia") %>'>
+                              
                             </asp:DropDownList>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="DropDownList1" ErrorMessage="Provincia, campo requerido" ForeColor="Red">*</asp:RequiredFieldValidator>
+                            
                             <asp:SqlDataSource ID="sqldsListarProvincias" runat="server" ConnectionString="<%$ ConnectionStrings:gestionHoteleraConnectionString %>" SelectCommand="SELECT [id_provincia], [descripcion_provincia] FROM [tbl_provincia] WHERE ([estado_provincia] = @estado_provincia)">
                                 <SelectParameters>
                                     <asp:Parameter DefaultValue="A" Name="estado_provincia" Type="String" />
@@ -39,6 +41,7 @@
                             <asp:Label ID="Label1" runat="server" Text='<%# Bind("id_provincia") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
+
                     <asp:TemplateField HeaderText="nombre" SortExpression="nombre_hotel">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("nombre_hotel") %>'></asp:TextBox>

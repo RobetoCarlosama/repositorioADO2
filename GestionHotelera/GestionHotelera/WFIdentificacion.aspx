@@ -19,17 +19,21 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="id_identificacion" DataSourceID="sqldsTipoIdentificacion" DefaultMode="Insert" CssClass="table table-striped table-advance table-hover" GridLines="None" HorizontalAlign="Center">
+                           <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="id_identificacion" DataSourceID="sqldsTipoIdentificacion" DefaultMode="Insert" CssClass="table table-striped table-advance table-hover" GridLines="None" HorizontalAlign="Center">
                                 <Fields>
                                     <asp:BoundField DataField="id_identificacion" HeaderText="id_identificacion" InsertVisible="False" ReadOnly="True" SortExpression="id_identificacion" Visible="False" />
-                                    <asp:TemplateField HeaderText="descripcion_identificacion" SortExpression="descripcion_identificacion">
+                                    <asp:TemplateField HeaderText="tipo identificación" SortExpression="descripcion_identificacion">
                                         <EditItemTemplate>
                                             <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("descripcion_identificacion") %>'></asp:TextBox>
                                         </EditItemTemplate>
                                         <InsertItemTemplate>
-                                            <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("descripcion_identificacion") %>' MaxLength="30"></asp:TextBox>
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Debe ingresar el tipo de identificación" ForeColor="Red">*</asp:RequiredFieldValidator>
-                                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Solo letras MAYÚSC" ForeColor="Blue" ValidationExpression="[A-Z ]*">*</asp:RegularExpressionValidator>
+                                            <asp:DropDownList ID="DropDownList1" runat="server" SelectedValue='<%# Bind("descripcion_identificacion") %>'>
+                                                <asp:ListItem Value="">Seleccione el tipo de identificacion</asp:ListItem>
+                                                <asp:ListItem Value="CEDULA">CEDULA</asp:ListItem>
+                                                <asp:ListItem Value="PASAPORTE">PASAPORTE</asp:ListItem>
+                                                <asp:ListItem Value="RUC">RUC</asp:ListItem>
+                                            </asp:DropDownList>
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="DropDownList1" ErrorMessage="Debe selecionar un tipo de identificación" ForeColor="Red">*</asp:RequiredFieldValidator>
                                         </InsertItemTemplate>
                                         <ItemTemplate>
                                             <asp:Label ID="Label1" runat="server" Text='<%# Bind("descripcion_identificacion") %>'></asp:Label>
@@ -54,6 +58,8 @@
                     </div>
                 </div>
             </div>
+             
+
             <%--<a class="btn-sm btn-primary" data-target="#exampleModal" data-toggle="modal">Nuevo <i class="icon_plus_alt2" data-target="#exampleModal" data-toggle="modal"></i></a>--%>
             <asp:LinkButton ID="LinkButton3" runat="server" data-target="#exampleModal" data-toggle="modal" CssClass="btn btn-primary">Nuevo <i class="icon_plus_alt2"></i></asp:LinkButton>
             <asp:ValidationSummary ID="ValidationSummary1" runat="server" ShowMessageBox="True" ShowSummary="False" />
@@ -75,10 +81,14 @@
                     <asp:BoundField DataField="id_identificacion" HeaderText="#" InsertVisible="False" ReadOnly="True" SortExpression="id_identificacion" />
                     <asp:TemplateField HeaderText="descripcion" SortExpression="descripcion_identificacion">
                         <EditItemTemplate>
-                            <asp:TextBox ID="TextBox2" runat="server" MaxLength="30" Text='<%# Bind("descripcion_identificacion") %>'></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="Debe ingresar el tipo de identificación" ForeColor="Red" ValidationGroup="grupoActualizar">*</asp:RequiredFieldValidator>
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="Solo letras MAYÚSC" ForeColor="Blue" ValidationExpression="[A-Z ]*" ValidationGroup="grupoActualizar">*</asp:RegularExpressionValidator>
-                            <asp:ValidationSummary ID="ValidationSummary2" runat="server" ForeColor="Blue" ValidationGroup="grupoActualizar" />
+                            <asp:DropDownList ID="DropDownList2" runat="server" SelectedValue='<%# Bind("descripcion_identificacion") %>'>
+                                <asp:ListItem Value="">Selecione el tipo de identificación</asp:ListItem>
+                                <asp:ListItem Value="CEDULA">CEDULA</asp:ListItem>
+                                <asp:ListItem Value="PASAPORTE">PASAPORTE</asp:ListItem>
+                                <asp:ListItem Value="RUC">RUC</asp:ListItem>
+                            </asp:DropDownList>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="DropDownList2" ErrorMessage="Debe seleccionar el tipo de identificación" ForeColor="Red" ValidationGroup="grupoActualizar">*</asp:RequiredFieldValidator>
+                            <asp:ValidationSummary ID="ValidationSummary2" runat="server" ForeColor="Blue" ValidationGroup="grupoActualizar" ShowMessageBox="True" ShowSummary="False" />
                         </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="Label2" runat="server" Text='<%# Bind("descripcion_identificacion") %>'></asp:Label>

@@ -4,7 +4,7 @@
 
 <html>
 <head runat="server">
-    <title>Inicio |  Admin GC</title>
+    <title>Inicio |  Admin GH</title>
 
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -18,9 +18,14 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/style-responsive.css" rel="stylesheet" />
 
-    
+    <!-- script para que funcione crystal report en tiempo real -->
     <script type="text/javascript" src="/crystalreportviewers13/js/crviewer/crv.js">
     </script> 
+
+    <!-- script para estilos de calendar extender -->
+    <link href="css/black.css" rel="stylesheet" type="text/css"/>
+
+   
     
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
     <!--[if lt IE 9]>
@@ -42,6 +47,8 @@
 <body>
 
     <form id="form1" runat="server">
+         <!-- Script para que funcione extenciones de Ajax -->
+    <asp:ScriptManager runat="server" EnableScriptGlobalization="True"></asp:ScriptManager>
         <!-- container section start -->
         <section id="container" class="">
             <!--header start-->
@@ -52,7 +59,7 @@
                 </div>
 
                 <!--logo start-->
-                <a href="inicio.aspx" class="logo">Gestion-<span class="lite">Hotelera</span></a>
+                <a href="inicio.aspx" class="logo">Gestión-<span class="lite">Hotelera</span></a>
                 <!--logo end-->
 
                 <div class="nav search-row" id="top_menu">
@@ -327,16 +334,34 @@
                             <ul class="sub">
                                 <li><a class="" href="WFIdentificacion.aspx">Tipo Identificacion</a></li>
                                 <li><a class="" href="WFRol.aspx">Roles</a></li>
+                                <li><a class="" href="WFPersona.aspx">Persona</a></li>
+                                <li><a class="" href="WFUsuarios.aspx">Usuarios</a></li>
                                 <li><a class="" href="WFHotel.aspx">Hotel</a></li>
                                 <li><a class="" href="WFTipoHabitacion.aspx">Tipo Habitación</a></li>
-                                <li><a class="" href="WFHabitacion.aspx">Habitación</a></li>
-                                <li><a class="" href="WFPersona.aspx">Tipo Persona</a></li>
-                                <li><a class="" href="">Persona</a></li> 
-                                <li><a class="" href="">Provinvia</a></li>
-                                <%--<li><a class="" href="WFProductos.aspx">Productos</a></li>
-                                <li><a class="" href="WFRutas.aspx">Rutas</a></li>
-                                <li><a class="" href="WFUsuario.aspx">Usuario</a></li>
-                                <li><a class="" href="WFGuardaDetails.aspx">Detalles</a></li>--%>
+                                <li><a class="" href="WFHabitacion.aspx">Habitación</a></li>                           
+                                <li><a class="" href="WFReservacion.aspx">Reservación</a></li> 
+                                <li><a class="" href="WFAlquiler.aspx">Alquiler</a></li>
+                            </ul>
+                        </li>
+                         <li class="sub-menu">
+                            <a href="javascript:;" class="">
+                                <i class="icon_document_alt"></i>
+                                <span>Menú Cliente</span>
+                                <span class="menu-arrow arrow_carrot-right"></span>
+                            </a>
+                            <ul class="sub">
+                                <li><a class="" href="WFReservarCliente.aspx">Reservar</a></li>
+                                <li><a class="" href="WFDetalleReservaCliente.aspx">Detalle Reserva</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu">
+                            <a href="javascript:;" class="">
+                                <i class="icon_document_alt"></i>
+                                <span>Menú Empleado</span>
+                                <span class="menu-arrow arrow_carrot-right"></span>
+                            </a>
+                            <ul class="sub">
+                                <li><a class="" href="WFControlHabitaciones.aspx">Control Habitaciones</a></li>
                             </ul>
                         </li>
                         <li class="sub-menu">
@@ -346,12 +371,10 @@
                                 <span class="menu-arrow arrow_carrot-right"></span>
                             </a>
                             <ul class="sub">
-                                <li><a class="" href="WFreporteprueba.aspx">Reporte Prueba</a></li>
-                                <li><a class="" href="WFDirecionIndividual.aspx">Dirección Individual</a></li>
-                                <li><a class="" href="">Direcciones</a></li>
-                                 <li><a class="" href=""> </a></li>
+                                <li><a class="" href="WFReporteReservas.aspx">Reservas</a></li>
                             </ul>
                         </li>
+
                         <%--<li class="sub-menu">
                         <a href="javascript:;" class="">
                             <i class="icon_desktop"></i>
@@ -453,6 +476,8 @@
         <!--custome script for all page-->
         <script src="js/scripts.js"></script>
 
+        
+        
     </form>
 </body>
 

@@ -75,7 +75,7 @@
                             <asp:TextBox ID="TextBox1" runat="server" MaxLength="30" Text='<%# Bind("descripcion_rol") %>'></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Rol, campo requerido" ForeColor="Red" ValidationGroup="actualizaRol">*</asp:RequiredFieldValidator>
                             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Solo letras MAYÚSC" ForeColor="Blue" ValidationExpression="[A-Z ]*" ValidationGroup="actualizaRol">*</asp:RegularExpressionValidator>
-                            <asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="actualizaRol" />
+                            <asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="actualizaRol" ShowMessageBox="True" ShowSummary="False" />
                         </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="Label1" runat="server" Text='<%# Bind("descripcion_rol") %>'></asp:Label>

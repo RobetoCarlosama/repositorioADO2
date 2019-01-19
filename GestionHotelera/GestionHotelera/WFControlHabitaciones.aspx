@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/home.Master" AutoEventWireup="true" CodeBehind="WFHabitacion.aspx.cs" Inherits="GestionHotelera.WFHabitacion" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/home.Master" AutoEventWireup="true" CodeBehind="WFControlHabitaciones.aspx.cs" Inherits="GestionHotelera.WFControlHabitaciones" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <title>Habitaciones</title>
+    <title>Control de Habitaciones</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <section class="panel">

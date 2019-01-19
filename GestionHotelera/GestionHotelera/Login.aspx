@@ -61,10 +61,10 @@
                     <asp:Label id="lbl_error" runat="server" Text=" " ForeColor="red"></asp:Label>
                 </div>
                 <label class="checkbox">
-                    <input id="txtRecordar" runat="server" type="checkbox" value="remember-me">
-                    Recordarme
+                    <%--<input id="txtRecordar" runat="server" type="checkbox" value="remember-me">--%>
+                    <a href="WFregistro.aspx#">Registrarse</a>
                 <span class="pull-right"><a href="#">Olvidó su contraseña?</a></span>
-                   
+                    
                 </label>
                 
                 <button id="btnIngresar" runat="server" class="btn btn-primary btn-lg btn-block" onserverclick="btnIngresar_Click">Ingresar</button>

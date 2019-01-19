@@ -43,6 +43,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=18.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.18.1.1\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
@@ -58,6 +61,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -1024,6 +1028,7 @@
     <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_zh_TW.js" />
     <Content Include="crystalreportviewers13\urlreporting\activexviewer.js" />
     <Content Include="crystalreportviewers13\urlreporting\appletviewer.js" />
+    <Content Include="css\black.css" />
     <Content Include="css\bootstrap-colorpicker.css" />
     <Content Include="css\bootstrap-datepicker.css" />
     <Content Include="css\bootstrap-theme.css" />
@@ -1060,6 +1065,7 @@
     <Content Include="img\geekslabs.png" />
     <Content Include="img\Germany.png" />
     <Content Include="img\gestion-comercial-internet.jpg" />
+    <Content Include="img\IconoReporte.ico" />
     <Content Include="img\icons\line-icon-c.png" />
     <Content Include="img\icons\line-icon-hover.png" />
     <Content Include="img\icons\line-icon.png" />
@@ -1147,19 +1153,42 @@
     <Content Include="js\xcharts.min.js" />
     <Content Include="Login.aspx" />
     <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="WFAlquiler.aspx" />
+    <Content Include="WFControlHabitaciones.aspx" />
+    <Content Include="WFCrearUsuario.aspx" />
+    <Content Include="WFDetalleReservaCliente.aspx" />
     <Content Include="WFHabitacion.aspx" />
     <Content Include="WFHotel.aspx" />
     <Content Include="WFIdentificacion.aspx" />
     <Content Include="WFPersona.aspx" />
+    <Content Include="WFPruebaRegistro.aspx" />
+    <Content Include="WFregistro.aspx" />
     <Content Include="WFreporteprueba.aspx" />
+    <Content Include="WFReporteReservas.aspx" />
+    <Content Include="WFReservacion.aspx" />
+    <Content Include="WFReservarCliente.aspx" />
     <Content Include="WFRol.aspx" />
     <Content Include="WFTipoHabitacion.aspx" />
+    <Content Include="WFUsuarios.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CRpruebas.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CRpruebas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRreservas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRreservas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="home.Master.cs">
@@ -1184,6 +1213,41 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFAlquiler.aspx.cs">
+      <DependentUpon>WFAlquiler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFAlquiler.aspx.designer.cs">
+      <DependentUpon>WFAlquiler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFControlHabitaciones.aspx.cs">
+      <DependentUpon>WFControlHabitaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFControlHabitaciones.aspx.designer.cs">
+      <DependentUpon>WFControlHabitaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFCrearUsuario.aspx.cs">
+      <DependentUpon>WFCrearUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFCrearUsuario.aspx.designer.cs">
+      <DependentUpon>WFCrearUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFDetalleReservaCliente.aspx.cs">
+      <DependentUpon>WFDetalleReservaCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFDetalleReservaCliente.aspx.designer.cs">
+      <DependentUpon>WFDetalleReservaCliente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WFHabitacion.aspx.cs">
       <DependentUpon>WFHabitacion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1212,12 +1276,47 @@
     <Compile Include="WFPersona.aspx.designer.cs">
       <DependentUpon>WFPersona.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WFPruebaRegistro.aspx.cs">
+      <DependentUpon>WFPruebaRegistro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFPruebaRegistro.aspx.designer.cs">
+      <DependentUpon>WFPruebaRegistro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFregistro.aspx.cs">
+      <DependentUpon>WFregistro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFregistro.aspx.designer.cs">
+      <DependentUpon>WFregistro.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WFreporteprueba.aspx.cs">
       <DependentUpon>WFreporteprueba.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="WFreporteprueba.aspx.designer.cs">
       <DependentUpon>WFreporteprueba.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFReporteReservas.aspx.cs">
+      <DependentUpon>WFReporteReservas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFReporteReservas.aspx.designer.cs">
+      <DependentUpon>WFReporteReservas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFReservacion.aspx.cs">
+      <DependentUpon>WFReservacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFReservacion.aspx.designer.cs">
+      <DependentUpon>WFReservacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFReservarCliente.aspx.cs">
+      <DependentUpon>WFReservarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFReservarCliente.aspx.designer.cs">
+      <DependentUpon>WFReservarCliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="WFRol.aspx.cs">
       <DependentUpon>WFRol.aspx</DependentUpon>
@@ -1232,6 +1331,13 @@
     </Compile>
     <Compile Include="WFTipoHabitacion.aspx.designer.cs">
       <DependentUpon>WFTipoHabitacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFUsuarios.aspx.cs">
+      <DependentUpon>WFUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFUsuarios.aspx.designer.cs">
+      <DependentUpon>WFUsuarios.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -1313,6 +1419,14 @@
     <EmbeddedResource Include="CRpruebas.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CRpruebas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRreservas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRreservas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
