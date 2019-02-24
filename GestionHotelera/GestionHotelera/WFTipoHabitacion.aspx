@@ -18,10 +18,10 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="id_tipohabitacion" DataSourceID="sqldsTipoHabitaciones" DefaultMode="Insert" CssClass="table table-striped table-advance table-hover" GridLines="None" HorizontalAlign="Center">
+                            <asp:DetailsView ID="DetailsView1" runat="server" Height="100%" Width="100%" AutoGenerateRows="False" DataKeyNames="id_tipohabitacion" DataSourceID="sqldsTipoHabitaciones" DefaultMode="Insert" CssClass="table-responsive table-striped table-advance table-hover" GridLines="None" HorizontalAlign="Center">
                 <Fields>
                     <asp:BoundField DataField="id_tipohabitacion" HeaderText="id_tipohabitacion" InsertVisible="False" ReadOnly="True" SortExpression="id_tipohabitacion" Visible="False" />
-                    <asp:TemplateField HeaderText="descripcion_tipohabitacion" SortExpression="descripcion_tipohabitacion">
+                    <asp:TemplateField HeaderText="TIPO DE HABITACI&#211;N" SortExpression="descripcion_tipohabitacion">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("descripcion_tipohabitacion") %>'></asp:TextBox>
                         </EditItemTemplate>
@@ -34,14 +34,14 @@
                             <asp:Label ID="Label1" runat="server" Text='<%# Bind("descripcion_tipohabitacion") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="precio_tipohabitacion" SortExpression="precio_tipohabitacion">
+                    <asp:TemplateField HeaderText="PECIO HABITACI&#211;N" SortExpression="precio_tipohabitacion">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("precio_tipohabitacion") %>'></asp:TextBox>
                         </EditItemTemplate>
                         <InsertItemTemplate>
                             <asp:TextBox ID="TextBox2" runat="server" MaxLength="10" Text='<%# Bind("precio_tipohabitacion") %>'></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="Precio, campo requerido 00.00" ForeColor="Red">*</asp:RequiredFieldValidator>
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="Solo números 00.00" ForeColor="Blue" ValidationExpression="^(\d|-)?(\d|,)*\.?\d*$">*</asp:RegularExpressionValidator>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="Precio, campo requerido 00,00" ForeColor="Red">*</asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="Solo números 00,00" ForeColor="Blue" ValidationExpression="^(\d|-)?(\d|,)*\.?\d*$">*</asp:RegularExpressionValidator>
                             <asp:ValidationSummary ID="ValidationSummary1" runat="server" ShowMessageBox="True" ShowSummary="False" />
                         </InsertItemTemplate>
                         <ItemTemplate>
@@ -127,7 +127,7 @@
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:BoundField DataField="id_tipohabitacion" HeaderText="#" InsertVisible="False" ReadOnly="True" SortExpression="id_tipohabitacion" />
-                    <asp:TemplateField HeaderText="descripción" SortExpression="descripcion_tipohabitacion">
+                    <asp:TemplateField HeaderText="DESCRIPCI&#211;N" SortExpression="descripcion_tipohabitacion">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox1" runat="server" MaxLength="30" Text='<%# Bind("descripcion_tipohabitacion") %>'></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBox1" ErrorMessage="Tipo habitación, campo requerido" ForeColor="Red" ValidationGroup="actualizaTipoHabitacion">*</asp:RequiredFieldValidator>
@@ -137,20 +137,42 @@
                             <asp:Label ID="Label1" runat="server" Text='<%# Bind("descripcion_tipohabitacion") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="precio" SortExpression="precio_tipohabitacion">
+                    <asp:TemplateField HeaderText="PRECIO" SortExpression="precio_tipohabitacion">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox2" runat="server" MaxLength="10" Text='<%# Bind("precio_tipohabitacion") %>'></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="TextBox2" ErrorMessage="Precio, campo requerido 00.00" ForeColor="Red" ValidationGroup="actualizaTipoHabitacion">*</asp:RequiredFieldValidator>
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="TextBox2" ErrorMessage="Solo números 00.00" ForeColor="Blue" ValidationExpression="^(\d|-)?(\d|,)*\.?\d*$" ValidationGroup="actualizaTipoHabitacion">*</asp:RegularExpressionValidator>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="TextBox2" ErrorMessage="Precio, campo requerido 00,00" ForeColor="Red" ValidationGroup="actualizaTipoHabitacion">*</asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="TextBox2" ErrorMessage="Solo números 00,00" ForeColor="Blue" ValidationExpression="^(\d|-)?(\d|,)*\.?\d*$" ValidationGroup="actualizaTipoHabitacion">*</asp:RegularExpressionValidator>
                             <asp:ValidationSummary ID="ValidationSummary2" runat="server" ValidationGroup="actualizaTipoHabitacion" ShowMessageBox="True" ShowSummary="False" />
                         </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="Label2" runat="server" Text='<%# Bind("precio_tipohabitacion") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:BoundField DataField="creacion_tipohabitacion" HeaderText="creación" ReadOnly="True" SortExpression="creacion_tipohabitacion" />
-                    <asp:BoundField DataField="actualizacion_tipohabitacion" HeaderText="actualización" ReadOnly="True" SortExpression="actualizacion_tipohabitacion" />
-                    <asp:BoundField DataField="estado_tipohabitacion" HeaderText="estado" ReadOnly="True" SortExpression="estado_tipohabitacion" />
+                    <asp:TemplateField HeaderText="CREACI&#211;N" SortExpression="creacion_tipohabitacion">
+                        <EditItemTemplate>
+                            <asp:Label runat="server" Text='<%# Eval("creacion_tipohabitacion") %>' ID="Label1"></asp:Label>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label runat="server" Text='<%# Bind("creacion_tipohabitacion") %>' ID="Label3"></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="ACTUALIZACI&#211;N" SortExpression="actualizacion_tipohabitacion">
+                        <EditItemTemplate>
+                            <asp:Label runat="server" Text='<%# Eval("actualizacion_tipohabitacion") %>' ID="Label2"></asp:Label>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label runat="server" Text='<%# Bind("actualizacion_tipohabitacion") %>' ID="Label4"></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="ESTADO" SortExpression="estado_tipohabitacion">
+                        <EditItemTemplate>
+                            <asp:Label runat="server" Text='<%# Eval("estado_tipohabitacion") %>' ID="Label3"></asp:Label>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label runat="server" Text='<%# Bind("estado_tipohabitacion") %>' ID="Label5"></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+
                 </Columns>
             </asp:GridView>
         </div>

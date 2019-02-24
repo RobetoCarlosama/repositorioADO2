@@ -59,7 +59,17 @@ namespace GestionHotelera
                     Session["perfil"] = rol.descripcion_rol;
                     Session["nombres"] = user.nombre1_persona + " " + user.apellido1_persona;
                     Session["nick"] = nk.nick_usuario;
-                    Response.Redirect("~/inicio.aspx");
+                    //Response.Redirect("~/inicio.aspx");
+
+                    if (Session["perfil"].Equals("ADMINISTRADOR"))
+                    {
+                        Response.Redirect("~/inicio.aspx");
+                    }
+                    else
+                    {
+                        Response.Redirect("~/inicio2.aspx");
+                    }
+
                 }
                 else
                 {

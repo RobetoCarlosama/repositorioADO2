@@ -10,15 +10,24 @@
 namespace GestionHotelera {
     
     
-    public partial class inicio {
+    public partial class WFReporteFactura {
         
         /// <summary>
-        /// Label1 control.
+        /// CrystalReportViewerFactura control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::CrystalDecisions.Web.CrystalReportViewer CrystalReportViewerFactura;
+        
+        /// <summary>
+        /// CrystalReportSourceFactura control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::CrystalDecisions.Web.CrystalReportSource CrystalReportSourceFactura;
     }
 }

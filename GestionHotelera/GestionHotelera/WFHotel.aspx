@@ -18,19 +18,18 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="id_hotel" DataSourceID="sqldsHoteles" DefaultMode="Insert" CssClass="table table-striped table-advance table-hover" GridLines="None" HorizontalAlign="Center">
+                            <asp:DetailsView ID="DetailsView1" runat="server" Height="100%" Width="100%" AutoGenerateRows="False" DataKeyNames="id_hotel" DataSourceID="sqldsHoteles" DefaultMode="Insert" CssClass="table-responsive table-striped table-advance table-hover" GridLines="None" HorizontalAlign="Center">
                 <Fields>
                     <asp:BoundField DataField="id_hotel" HeaderText="id_hotel" InsertVisible="False" ReadOnly="True" SortExpression="id_hotel" Visible="False" />
-                    <asp:TemplateField HeaderText="seleccione la provincia" SortExpression="id_provincia">
+                    <asp:TemplateField HeaderText="SELECIONE LA PROVINCIA" SortExpression="id_provincia">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("id_provincia") %>'></asp:TextBox>
                         </EditItemTemplate>
                         <InsertItemTemplate>
                             <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="sqldsListarProvincias" DataTextField="descripcion_provincia" DataValueField="id_provincia" Width="100%" SelectedValue='<%# Bind("id_provincia") %>'>
-                              
                             </asp:DropDownList>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="DropDownList1" ErrorMessage="Provincia, campo requerido" ForeColor="Red">*</asp:RequiredFieldValidator>
-                            
+
                             <asp:SqlDataSource ID="sqldsListarProvincias" runat="server" ConnectionString="<%$ ConnectionStrings:gestionHoteleraConnectionString %>" SelectCommand="SELECT [id_provincia], [descripcion_provincia] FROM [tbl_provincia] WHERE ([estado_provincia] = @estado_provincia)">
                                 <SelectParameters>
                                     <asp:Parameter DefaultValue="A" Name="estado_provincia" Type="String" />
@@ -42,7 +41,7 @@
                         </ItemTemplate>
                     </asp:TemplateField>
 
-                    <asp:TemplateField HeaderText="nombre" SortExpression="nombre_hotel">
+                    <asp:TemplateField HeaderText="NOMBRE DE HOTEL" SortExpression="nombre_hotel">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("nombre_hotel") %>'></asp:TextBox>
                         </EditItemTemplate>
@@ -55,7 +54,7 @@
                             <asp:Label ID="Label2" runat="server" Text='<%# Bind("nombre_hotel") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="ruc" SortExpression="ruc_hotel">
+                    <asp:TemplateField HeaderText="RUC" SortExpression="ruc_hotel">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("ruc_hotel") %>'></asp:TextBox>
                         </EditItemTemplate>
@@ -68,7 +67,7 @@
                             <asp:Label ID="Label3" runat="server" Text='<%# Bind("ruc_hotel") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="direccion" SortExpression="direccion_hotel">
+                    <asp:TemplateField HeaderText="DIRECI&#211;N" SortExpression="direccion_hotel">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox4" runat="server" Text='<%# Bind("direccion_hotel") %>'></asp:TextBox>
                         </EditItemTemplate>
@@ -81,7 +80,7 @@
                             <asp:Label ID="Label4" runat="server" Text='<%# Bind("direccion_hotel") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="teléfono" SortExpression="telefono_hotel">
+                    <asp:TemplateField HeaderText="TEL&#201;FONO" SortExpression="telefono_hotel">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox5" runat="server" Text='<%# Bind("telefono_hotel") %>'></asp:TextBox>
                         </EditItemTemplate>
@@ -94,7 +93,7 @@
                             <asp:Label ID="Label5" runat="server" Text='<%# Bind("telefono_hotel") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="email" SortExpression="email_hotel">
+                    <asp:TemplateField HeaderText="E-MAIL" SortExpression="email_hotel">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox6" runat="server" Text='<%# Bind("email_hotel") %>'></asp:TextBox>
                         </EditItemTemplate>
@@ -189,7 +188,7 @@
                             <asp:Label ID="Label3" runat="server" Text='<%# Bind("id_hotel") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="provincia" SortExpression="descripcion_provincia">
+                    <asp:TemplateField HeaderText="PROVINCIA" SortExpression="descripcion_provincia">
                         <EditItemTemplate>
                             <asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="sqldsListarProvinciasActualizar" DataTextField="descripcion_provincia" DataValueField="id_provincia" SelectedValue='<%# Bind("id_provincia") %>'>
                             </asp:DropDownList>
@@ -212,7 +211,7 @@
                             <asp:Label ID="Label1" runat="server" Text='<%# Bind("id_provincia") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="nombre" SortExpression="nombre_hotel">
+                    <asp:TemplateField HeaderText="NOMBRE" SortExpression="nombre_hotel">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("nombre_hotel") %>' MaxLength="40"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="TextBox1" ErrorMessage="Nombre, campo requerido" ForeColor="Red" ValidationGroup="actualizaHotel">*</asp:RequiredFieldValidator>
@@ -222,7 +221,7 @@
                             <asp:Label ID="Label4" runat="server" Text='<%# Bind("nombre_hotel") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="ruc" SortExpression="ruc_hotel">
+                    <asp:TemplateField HeaderText="RUC" SortExpression="ruc_hotel">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("ruc_hotel") %>' MaxLength="13"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="TextBox2" ErrorMessage="Ruc, campo requerido" ForeColor="Red" ValidationGroup="actualizaHotel">*</asp:RequiredFieldValidator>
@@ -232,7 +231,7 @@
                             <asp:Label ID="Label5" runat="server" Text='<%# Bind("ruc_hotel") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="direccion" SortExpression="direccion_hotel">
+                    <asp:TemplateField HeaderText="DIRECCI&#211;N" SortExpression="direccion_hotel">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("direccion_hotel") %>' MaxLength="50"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="TextBox3" ErrorMessage="Dirección, campo requerido" ForeColor="Red" ValidationGroup="actualizaHotel">*</asp:RequiredFieldValidator>
@@ -242,7 +241,7 @@
                             <asp:Label ID="Label6" runat="server" Text='<%# Bind("direccion_hotel") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="telefono" SortExpression="telefono_hotel">
+                    <asp:TemplateField HeaderText="TEL&#201;FONO" SortExpression="telefono_hotel">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox4" runat="server" Text='<%# Bind("telefono_hotel") %>' MaxLength="10" Width="80px"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="TextBox4" ErrorMessage="Teléfono, campo requerido" ForeColor="Red" ValidationGroup="actualizaHotel">*</asp:RequiredFieldValidator>
@@ -252,7 +251,7 @@
                             <asp:Label ID="Label7" runat="server" Text='<%# Bind("telefono_hotel") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="email" SortExpression="email_hotel">
+                    <asp:TemplateField HeaderText="E-MAIL" SortExpression="email_hotel">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox5" runat="server" Text='<%# Bind("email_hotel") %>' MaxLength="40"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="TextBox5" ErrorMessage="Email, campo requerido" ForeColor="Red" ValidationGroup="actualizaHotel">*</asp:RequiredFieldValidator>
@@ -263,7 +262,7 @@
                             <asp:Label ID="Label8" runat="server" Text='<%# Bind("email_hotel") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="creacion" SortExpression="creacion_hotel" Visible="False">
+                    <asp:TemplateField HeaderText="CREACI&#211;N" SortExpression="creacion_hotel" Visible="False">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox6" runat="server" Text='<%# Bind("creacion_hotel") %>' ReadOnly="True"></asp:TextBox>
                         </EditItemTemplate>

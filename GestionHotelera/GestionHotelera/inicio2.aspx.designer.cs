@@ -10,7 +10,7 @@
 namespace GestionHotelera {
     
     
-    public partial class inicio {
+    public partial class inicio2 {
         
         /// <summary>
         /// Label1 control.

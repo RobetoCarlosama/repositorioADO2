@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace GestionHotelera
 {
-    public partial class WFReporteReservas : System.Web.UI.Page
+    public partial class WFReporteComprobanteReserva : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            CrystalReportViewer1.RefreshReport();
+            CrystalReportViewerComprobante.RefreshReport();
         }
     }
 }

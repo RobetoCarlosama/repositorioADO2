@@ -10,7 +10,16 @@
 namespace GestionHotelera {
     
     
-    public partial class WFDetalleReservaCliente {
+    public partial class WFPedido {
+        
+        /// <summary>
+        /// DetailsView1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DetailsView DetailsView1;
         
         /// <summary>
         /// LinkButton3 control.
@@ -31,12 +40,12 @@ namespace GestionHotelera {
         protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
-        /// sqldsReservacion control.
+        /// sqldsPedido control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource sqldsReservacion;
+        protected global::System.Web.UI.WebControls.SqlDataSource sqldsPedido;
     }
 }

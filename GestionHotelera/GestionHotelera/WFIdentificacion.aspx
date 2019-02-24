@@ -19,16 +19,16 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                           <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="id_identificacion" DataSourceID="sqldsTipoIdentificacion" DefaultMode="Insert" CssClass="table table-striped table-advance table-hover" GridLines="None" HorizontalAlign="Center">
+                           <asp:DetailsView ID="DetailsView1" runat="server" Height="100%" Width="100%" AutoGenerateRows="False" DataKeyNames="id_identificacion" DataSourceID="sqldsTipoIdentificacion" DefaultMode="Insert" CssClass="table-responsive table-striped table-advance table-hover" GridLines="None" HorizontalAlign="Center">
                                 <Fields>
                                     <asp:BoundField DataField="id_identificacion" HeaderText="id_identificacion" InsertVisible="False" ReadOnly="True" SortExpression="id_identificacion" Visible="False" />
-                                    <asp:TemplateField HeaderText="tipo identificación" SortExpression="descripcion_identificacion">
+                                    <asp:TemplateField HeaderText="TIPO DE IDENTIFICACIÓN" SortExpression="descripcion_identificacion">
                                         <EditItemTemplate>
                                             <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("descripcion_identificacion") %>'></asp:TextBox>
                                         </EditItemTemplate>
                                         <InsertItemTemplate>
                                             <asp:DropDownList ID="DropDownList1" runat="server" SelectedValue='<%# Bind("descripcion_identificacion") %>'>
-                                                <asp:ListItem Value="">Seleccione el tipo de identificacion</asp:ListItem>
+                                                <asp:ListItem Value="">SELECIONE EL TIPO DE IDENTIFICACIÓN</asp:ListItem>
                                                 <asp:ListItem Value="CEDULA">CEDULA</asp:ListItem>
                                                 <asp:ListItem Value="PASAPORTE">PASAPORTE</asp:ListItem>
                                                 <asp:ListItem Value="RUC">RUC</asp:ListItem>
@@ -79,7 +79,7 @@
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:BoundField DataField="id_identificacion" HeaderText="#" InsertVisible="False" ReadOnly="True" SortExpression="id_identificacion" />
-                    <asp:TemplateField HeaderText="descripcion" SortExpression="descripcion_identificacion">
+                    <asp:TemplateField HeaderText="DESCRIPCIÓN" SortExpression="descripcion_identificacion">
                         <EditItemTemplate>
                             <asp:DropDownList ID="DropDownList2" runat="server" SelectedValue='<%# Bind("descripcion_identificacion") %>'>
                                 <asp:ListItem Value="">Selecione el tipo de identificación</asp:ListItem>
@@ -94,7 +94,7 @@
                             <asp:Label ID="Label2" runat="server" Text='<%# Bind("descripcion_identificacion") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="creacion" SortExpression="creacion_identificacion">
+                    <asp:TemplateField HeaderText="CREACIÓN" SortExpression="creacion_identificacion">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox3" runat="server" ReadOnly="True" Text='<%# Bind("creacion_identificacion") %>'></asp:TextBox>
                         </EditItemTemplate>
@@ -102,7 +102,7 @@
                             <asp:Label ID="Label3" runat="server" Text='<%# Bind("creacion_identificacion") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="actualizacion" SortExpression="actualizacion_identificacion">
+                    <asp:TemplateField HeaderText="ACTUALIZACIÓN" SortExpression="actualizacion_identificacion">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("actualizacion_identificacion") %>' ReadOnly="True"></asp:TextBox>
                         </EditItemTemplate>
@@ -110,7 +110,7 @@
                             <asp:Label ID="Label1" runat="server" Text='<%# Bind("actualizacion_identificacion") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="estado" SortExpression="estado_identificacion">
+                    <asp:TemplateField HeaderText="ESTADO" SortExpression="estado_identificacion">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox4" runat="server" ReadOnly="True" Text='<%# Bind("estado_identificacion") %>'></asp:TextBox>
                         </EditItemTemplate>

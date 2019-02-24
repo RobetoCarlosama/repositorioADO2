@@ -19,10 +19,10 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="id_usuario" DataSourceID="sqldsUsuarios" DefaultMode="Insert" CssClass="table table-striped table-advance table-hover" GridLines="None" HorizontalAlign="Center">
+                            <asp:DetailsView ID="DetailsView1" runat="server" Height="100%" Width="100%" AutoGenerateRows="False" DataKeyNames="id_usuario" DataSourceID="sqldsUsuarios" DefaultMode="Insert" CssClass="table-responsive table-striped table-advance table-hover" GridLines="None" HorizontalAlign="Center">
                                 <Fields>
                                     <asp:BoundField DataField="id_usuario" HeaderText="id_usuario" InsertVisible="False" ReadOnly="True" SortExpression="id_usuario" Visible="False" />
-                                    <asp:TemplateField HeaderText="Seleccione el usuario" SortExpression="Usuario">
+                                    <asp:TemplateField HeaderText="SELECIONE EL USUARIO" SortExpression="Usuario">
                                         <EditItemTemplate>
                                             <asp:Label ID="Label1" runat="server" Text='<%# Eval("Usuario") %>'></asp:Label>
                                         </EditItemTemplate>
@@ -50,7 +50,7 @@
                                             <asp:Label ID="Label1" runat="server" Text='<%# Bind("id_persona") %>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:TemplateField HeaderText="Selecione el rol de usuario" SortExpression="descripcion_rol">
+                                    <asp:TemplateField HeaderText="SELECIONE EL ROL DE USUARIO" SortExpression="descripcion_rol">
                                         <EditItemTemplate>
                                             <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("descripcion_rol") %>'></asp:TextBox>
                                         </EditItemTemplate>
@@ -68,7 +68,7 @@
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                     <asp:BoundField DataField="id_rol" HeaderText="id_rol" SortExpression="id_rol" Visible="False" />
-                                    <asp:TemplateField HeaderText="nick" SortExpression="nick_usuario">
+                                    <asp:TemplateField HeaderText="NICK" SortExpression="nick_usuario">
                                         <EditItemTemplate>
                                             <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("nick_usuario") %>'></asp:TextBox>
                                         </EditItemTemplate>
@@ -81,7 +81,7 @@
                                             <asp:Label ID="Label4" runat="server" Text='<%# Bind("nick_usuario") %>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:TemplateField HeaderText="clave" SortExpression="clave_usuario">
+                                    <asp:TemplateField HeaderText="CLAVE" SortExpression="clave_usuario">
                                         <EditItemTemplate>
                                             <asp:TextBox ID="TextBox4" runat="server" Text='<%# Bind("clave_usuario") %>'></asp:TextBox>
                                         </EditItemTemplate>
@@ -132,7 +132,7 @@
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:BoundField DataField="id_usuario" HeaderText="#" InsertVisible="False" ReadOnly="True" SortExpression="id_usuario" />
-                    <asp:TemplateField HeaderText="Usuario" SortExpression="Usuario">
+                    <asp:TemplateField HeaderText="USUARIO" SortExpression="Usuario">
                         <EditItemTemplate>
                             <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="sqldsListarUsuariosDDL" DataTextField="Usuario" DataValueField="id_persona" SelectedValue='<%# Bind("id_persona") %>' Width="90%">
                             </asp:DropDownList>
@@ -154,7 +154,7 @@
                             <asp:Label ID="Label6" runat="server" Text='<%# Bind("id_persona") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="rol" SortExpression="descripcion_rol">
+                    <asp:TemplateField HeaderText="ROL" SortExpression="descripcion_rol">
                         <EditItemTemplate>
                             <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="sqldsListarRolesDDL" DataTextField="descripcion_rol" DataValueField="id_rol" SelectedValue='<%# Bind("id_rol") %>' Width="80%">
                             </asp:DropDownList>
@@ -169,7 +169,7 @@
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:BoundField DataField="id_rol" HeaderText="id_rol" SortExpression="id_rol" Visible="False" />
-                    <asp:TemplateField HeaderText="nick" SortExpression="nick_usuario">
+                    <asp:TemplateField HeaderText="NICK" SortExpression="nick_usuario">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox5" runat="server" Text='<%# Bind("nick_usuario") %>' Width="80px"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBox5" ErrorMessage="Debe ingresar el nick de usuario" ForeColor="Red" ValidationGroup="actualizarUsuario">*</asp:RequiredFieldValidator>
@@ -179,7 +179,7 @@
                             <asp:Label ID="Label7" runat="server" Text='<%# Bind("nick_usuario") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="clave" SortExpression="clave_usuario">
+                    <asp:TemplateField HeaderText="CLAVE" SortExpression="clave_usuario">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox6" runat="server" Text='<%# Bind("clave_usuario") %>' Width="80px"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="TextBox6" ErrorMessage="Debe ingresar una contraseña" ForeColor="Red" ValidationGroup="actualizarUsuario">*</asp:RequiredFieldValidator>
@@ -189,7 +189,7 @@
                             <asp:Label ID="Label8" runat="server" Text='<%# Bind("clave_usuario") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="creación" SortExpression="creacion_usuario">
+                    <asp:TemplateField HeaderText="CREACI&#211;N" SortExpression="creacion_usuario">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox2" runat="server" ReadOnly="True" Text='<%# Bind("creacion_usuario") %>'></asp:TextBox>
                         </EditItemTemplate>
@@ -197,7 +197,7 @@
                             <asp:Label ID="Label3" runat="server" Text='<%# Bind("creacion_usuario") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="actualización" SortExpression="actualizacion_usuario">
+                    <asp:TemplateField HeaderText="ACTUALIZACI&#211;N" SortExpression="actualizacion_usuario">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox3" runat="server" ReadOnly="True" Text='<%# Bind("actualizacion_usuario") %>'></asp:TextBox>
                         </EditItemTemplate>
@@ -205,7 +205,7 @@
                             <asp:Label ID="Label4" runat="server" Text='<%# Bind("actualizacion_usuario") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="estado" SortExpression="estado_usuario">
+                    <asp:TemplateField HeaderText="ESTADO" SortExpression="estado_usuario">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox4" runat="server" ReadOnly="True" Text='<%# Bind("estado_usuario") %>' Width="30px"></asp:TextBox>
                         </EditItemTemplate>

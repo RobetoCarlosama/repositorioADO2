@@ -20,10 +20,10 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" CssClass="table table-striped table-advance table-hover" DataKeyNames="id_persona" DataSourceID="sqldsPersona" DefaultMode="Insert" GridLines="None" HorizontalAlign="Center">
+                            <asp:DetailsView ID="DetailsView1" runat="server" Height="100%" Width="100%" AutoGenerateRows="False" CssClass="table-responsive table-striped table-advance table-hover" DataKeyNames="id_persona" DataSourceID="sqldsPersona" DefaultMode="Insert" GridLines="None" HorizontalAlign="Center">
                                 <Fields>
                                     <asp:BoundField DataField="id_persona" HeaderText="id_persona" InsertVisible="False" ReadOnly="True" SortExpression="id_persona" Visible="False" />
-                                    <asp:TemplateField HeaderText="identificación" SortExpression="descripcion_identificacion">
+                                    <asp:TemplateField HeaderText="IDENTIFICACI&#211;N" SortExpression="descripcion_identificacion">
                                         <EditItemTemplate>
                                             <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("descripcion_identificacion") %>'></asp:TextBox>
                                         </EditItemTemplate>
@@ -40,7 +40,7 @@
                                             <asp:Label ID="Label1" runat="server" Text='<%# Bind("descripcion_identificacion") %>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:TemplateField HeaderText="# identificación" SortExpression="numero_identificacionpersona">
+                                    <asp:TemplateField HeaderText="NO. IDENTIFICACI&#211;N" SortExpression="numero_identificacionpersona">
                                         <EditItemTemplate>
                                             <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("numero_identificacionpersona") %>'></asp:TextBox>
                                         </EditItemTemplate>
@@ -54,7 +54,7 @@
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                     <asp:BoundField DataField="id_identificacion" HeaderText="id_identificacion" SortExpression="id_identificacion" Visible="False" />
-                                    <asp:TemplateField HeaderText="tipopersona" SortExpression="descripcion_tipopersona">
+                                    <asp:TemplateField HeaderText="TIPO DE PERSONA" SortExpression="descripcion_tipopersona">
                                         <EditItemTemplate>
                                             <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("descripcion_tipopersona") %>'></asp:TextBox>
                                         </EditItemTemplate>
@@ -72,7 +72,7 @@
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                     <asp:BoundField DataField="id_tipopersona" HeaderText="id_tipopersona" SortExpression="id_tipopersona" Visible="False" />
-                                    <asp:TemplateField HeaderText="apellido1" SortExpression="apellido1_persona">
+                                    <asp:TemplateField HeaderText="PRIMER APELLIDO" SortExpression="apellido1_persona">
                                         <EditItemTemplate>
                                             <asp:TextBox ID="TextBox4" runat="server" Text='<%# Bind("apellido1_persona") %>'></asp:TextBox>
                                         </EditItemTemplate>
@@ -85,7 +85,7 @@
                                             <asp:Label ID="Label4" runat="server" Text='<%# Bind("apellido1_persona") %>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:TemplateField HeaderText="apellido2" SortExpression="apellido2_persona">
+                                    <asp:TemplateField HeaderText="SEGUNDO APELLIDO" SortExpression="apellido2_persona">
                                         <EditItemTemplate>
                                             <asp:TextBox ID="TextBox5" runat="server" Text='<%# Bind("apellido2_persona") %>'></asp:TextBox>
                                         </EditItemTemplate>
@@ -98,7 +98,7 @@
                                             <asp:Label ID="Label5" runat="server" Text='<%# Bind("apellido2_persona") %>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:TemplateField HeaderText="nombre1" SortExpression="nombre1_persona">
+                                    <asp:TemplateField HeaderText="PRIMER NOMBRE" SortExpression="nombre1_persona">
                                         <EditItemTemplate>
                                             <asp:TextBox ID="TextBox6" runat="server" Text='<%# Bind("nombre1_persona") %>'></asp:TextBox>
                                         </EditItemTemplate>
@@ -111,7 +111,7 @@
                                             <asp:Label ID="Label6" runat="server" Text='<%# Bind("nombre1_persona") %>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:TemplateField HeaderText="nombre2" SortExpression="nombre2_persona">
+                                    <asp:TemplateField HeaderText="SEGUNDO NOMBRE" SortExpression="nombre2_persona">
                                         <EditItemTemplate>
                                             <asp:TextBox ID="TextBox7" runat="server" Text='<%# Bind("nombre2_persona") %>'></asp:TextBox>
                                         </EditItemTemplate>
@@ -124,7 +124,7 @@
                                             <asp:Label ID="Label7" runat="server" Text='<%# Bind("nombre2_persona") %>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:TemplateField HeaderText="dirección" SortExpression="direccion_persona">
+                                    <asp:TemplateField HeaderText="DIRECI&#211;N" SortExpression="direccion_persona">
                                         <EditItemTemplate>
                                             <asp:TextBox ID="TextBox8" runat="server" Text='<%# Bind("direccion_persona") %>'></asp:TextBox>
                                         </EditItemTemplate>
@@ -137,7 +137,7 @@
                                             <asp:Label ID="Label8" runat="server" Text='<%# Bind("direccion_persona") %>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:TemplateField HeaderText="celular" SortExpression="celular_persona">
+                                    <asp:TemplateField HeaderText="CELULAR" SortExpression="celular_persona">
                                         <EditItemTemplate>
                                             <asp:TextBox ID="TextBox9" runat="server" Text='<%# Bind("celular_persona") %>'></asp:TextBox>
                                         </EditItemTemplate>
@@ -150,7 +150,7 @@
                                             <asp:Label ID="Label9" runat="server" Text='<%# Bind("celular_persona") %>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:TemplateField HeaderText="teléfono" SortExpression="telefono_persona">
+                                    <asp:TemplateField HeaderText="TEL&#201;FONO" SortExpression="telefono_persona">
                                         <EditItemTemplate>
                                             <asp:TextBox ID="TextBox10" runat="server" Text='<%# Bind("telefono_persona") %>'></asp:TextBox>
                                         </EditItemTemplate>
@@ -163,7 +163,7 @@
                                             <asp:Label ID="Label10" runat="server" Text='<%# Bind("telefono_persona") %>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:TemplateField HeaderText="email" SortExpression="email_persona">
+                                    <asp:TemplateField HeaderText="E-MAIL" SortExpression="email_persona">
                                         <EditItemTemplate>
                                             <asp:TextBox ID="TextBox11" runat="server" Text='<%# Bind("email_persona") %>'></asp:TextBox>
                                         </EditItemTemplate>
@@ -210,7 +210,7 @@
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:BoundField DataField="id_persona" HeaderText="#" InsertVisible="False" ReadOnly="True" SortExpression="id_persona" />
-                    <asp:TemplateField HeaderText="identificación" SortExpression="descripcion_identificacion">
+                    <asp:TemplateField HeaderText="TIPO-ID" SortExpression="descripcion_identificacion">
                         <EditItemTemplate>
                             <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="sqldsIentificacionesDDL" DataTextField="descripcion_identificacion" DataValueField="id_identificacion" SelectedValue='<%# Bind("id_identificacion") %>' Width="100%">
                             </asp:DropDownList>
@@ -225,7 +225,7 @@
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:BoundField DataField="id_identificacion" HeaderText="id_identificacion" SortExpression="id_identificacion" Visible="False" />
-                    <asp:TemplateField HeaderText="tipopersona" SortExpression="descripcion_tipopersona">
+                    <asp:TemplateField HeaderText="TIPO" SortExpression="descripcion_tipopersona">
                         <EditItemTemplate>
                             <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="sqldsTiposPersonaDDL" DataTextField="descripcion_tipopersona" DataValueField="id_tipopersona" SelectedValue='<%# Bind("id_tipopersona") %>' Width="100%">
                             </asp:DropDownList>
@@ -240,16 +240,16 @@
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:BoundField DataField="id_tipopersona" HeaderText="id_tipopersona" SortExpression="id_tipopersona" Visible="False" />
-                    <asp:BoundField DataField="numero_identificacionpersona" HeaderText="Número" SortExpression="numero_identificacionpersona" />
-                    <asp:BoundField DataField="apellido1_persona" HeaderText="apellido1" SortExpression="apellido1_persona" />
-                    <asp:BoundField DataField="apellido2_persona" HeaderText="apellido2" SortExpression="apellido2_persona" />
-                    <asp:BoundField DataField="nombre1_persona" HeaderText="nombre1" SortExpression="nombre1_persona" />
-                    <asp:BoundField DataField="nombre2_persona" HeaderText="nombre2" SortExpression="nombre2_persona" />
-                    <asp:BoundField DataField="direccion_persona" HeaderText="dirección" SortExpression="direccion_persona" />
-                    <asp:BoundField DataField="celular_persona" HeaderText="celular" SortExpression="celular_persona" />
-                    <asp:BoundField DataField="telefono_persona" HeaderText="teléfono" SortExpression="telefono_persona" />
-                    <asp:BoundField DataField="email_persona" HeaderText="email" SortExpression="email_persona" />
-                    <asp:TemplateField HeaderText="creación" SortExpression="creacion_persona">
+                    <asp:BoundField DataField="numero_identificacionpersona" HeaderText="NO. ID" SortExpression="numero_identificacionpersona" />
+                    <asp:BoundField DataField="apellido1_persona" HeaderText="APELLIDO 1" SortExpression="apellido1_persona" />
+                    <asp:BoundField DataField="apellido2_persona" HeaderText="APELLIDO 2" SortExpression="apellido2_persona" />
+                    <asp:BoundField DataField="nombre1_persona" HeaderText="NOMBRE 1" SortExpression="nombre1_persona" />
+                    <asp:BoundField DataField="nombre2_persona" HeaderText="NOMBRE 2" SortExpression="nombre2_persona" />
+                    <asp:BoundField DataField="direccion_persona" HeaderText="DIRECI&#211;N" SortExpression="direccion_persona" />
+                    <asp:BoundField DataField="celular_persona" HeaderText="CELULAR" SortExpression="celular_persona" />
+                    <asp:BoundField DataField="telefono_persona" HeaderText="TEL&#201;FONO" SortExpression="telefono_persona" />
+                    <asp:BoundField DataField="email_persona" HeaderText="E-MAIL" SortExpression="email_persona" />
+                    <asp:TemplateField HeaderText="CREACI&#211;N" SortExpression="creacion_persona">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox1" runat="server" ReadOnly="True" Text='<%# Bind("creacion_persona") %>'></asp:TextBox>
                         </EditItemTemplate>
@@ -257,7 +257,7 @@
                             <asp:Label ID="Label3" runat="server" Text='<%# Bind("creacion_persona") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="actualización" SortExpression="actualizacion_persona">
+                    <asp:TemplateField HeaderText="ACTUALIZACI&#211;N" SortExpression="actualizacion_persona">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox2" runat="server" ReadOnly="True" Text='<%# Bind("actualizacion_persona") %>'></asp:TextBox>
                         </EditItemTemplate>
@@ -265,7 +265,7 @@
                             <asp:Label ID="Label4" runat="server" Text='<%# Bind("actualizacion_persona") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="estado" SortExpression="estado_persona">
+                    <asp:TemplateField HeaderText="ESTADO" SortExpression="estado_persona">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox3" runat="server" ReadOnly="True" Text='<%# Bind("estado_persona") %>'></asp:TextBox>
                         </EditItemTemplate>

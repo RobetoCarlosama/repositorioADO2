@@ -177,6 +177,17 @@
         }
 </script>
 
+    <!-- Script para convertir a mayusculas -->
+    <style type="text/css">
+        .minusculas {
+            text-transform: lowercase;
+        }
+
+        .mayusculas {
+            text-transform: uppercase;
+        }
+    </style>
+
     <!-- Script para Cconfirmar datos y redireccionar paginas -->
     <script type="text/javascript">
     function confirmacion() {
@@ -208,10 +219,10 @@
                 <div class="form">
                     <form class="form-validate form-horizontal" id="feedback_form" method="get" action="" novalidate="novalidate" runat="server">
                         <div class="col-lg-5">
-                        Ingrese el número de identificación
+                       Verificar # de identificación
                          </div>
                         <div class="col-lg-5">
-                        <asp:TextBox ID="ruc" runat="server" CssClass="form-control error" MaxLength="13" placeholder="# de identificacion"></asp:TextBox>
+                        <asp:TextBox ID="ruc" runat="server" CssClass="form-control error" MaxLength="13" placeholder="# de identificacion" onblur="validarDocumento();"></asp:TextBox>
                         </div>
 
 
@@ -239,12 +250,12 @@
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
-                                <asp:TemplateField HeaderText="# identificación" SortExpression="numero_identificacionpersona">
+                                <asp:TemplateField HeaderText="Ingrese su # de identificación" SortExpression="numero_identificacionpersona">
                                     <EditItemTemplate>
                                         <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("numero_identificacionpersona") %>'></asp:TextBox>
                                     </EditItemTemplate>
                                     <InsertItemTemplate>
-                                        <asp:TextBox ID="TextBox1" runat="server" MaxLength="13" Text='<%# Bind("numero_identificacionpersona") %>' CssClass="form-control error" onblur="validarDocumento();" placeholder="digite nuevamente el # de identificacion"></asp:TextBox>
+                                        <asp:TextBox ID="TextBox1" runat="server" MaxLength="13" Text='<%# Bind("numero_identificacionpersona") %>' CssClass="form-control error"  placeholder="digite nuevamente el # de identificacion"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Debe ingresar el # de identificación" ForeColor="Red" ValidationGroup="insertarPersona">*</asp:RequiredFieldValidator>
                                         <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Solo números" ForeColor="Blue" ValidationExpression="^(0|[0-9]\d*)$" ValidationGroup="insertarPersona">*</asp:RegularExpressionValidator>
                                     </InsertItemTemplate>
@@ -284,7 +295,7 @@
                                         <asp:TextBox ID="TextBox4" runat="server" Text='<%# Bind("apellido1_persona") %>'></asp:TextBox>
                                     </EditItemTemplate>
                                     <InsertItemTemplate>
-                                        <asp:TextBox ID="TextBox2" runat="server" MaxLength="20" Text='<%# Bind("apellido1_persona") %>' CssClass="form-control error"></asp:TextBox>
+                                        <asp:TextBox ID="TextBox2" runat="server" MaxLength="20" Text='<%# Bind("apellido1_persona") %>' CssClass="form-control error mayusculas" ></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="Debe ingresar el primer apellido" ForeColor="Red" ValidationGroup="insertarPersona">*</asp:RequiredFieldValidator>
                                         <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="Solo letras MAYÚSC" ForeColor="Blue" ValidationExpression="[A-Z]*" ValidationGroup="insertarPersona">*</asp:RegularExpressionValidator>
                                     </InsertItemTemplate>
@@ -298,7 +309,7 @@
                                         <asp:TextBox ID="TextBox5" runat="server" Text='<%# Bind("apellido2_persona") %>'></asp:TextBox>
                                     </EditItemTemplate>
                                     <InsertItemTemplate>
-                                        <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("apellido2_persona") %>' CssClass="form-control error"></asp:TextBox>
+                                        <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("apellido2_persona") %>' CssClass="form-control mayusculas"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBox3" ErrorMessage="Debe ingresar el segundo apellido" ForeColor="Red" ValidationGroup="insertarPersona">*</asp:RequiredFieldValidator>
                                         <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="TextBox3" ErrorMessage="Solo letras MAYÚSC" ForeColor="Blue" ValidationExpression="[A-Z]*" ValidationGroup="insertarPersona">*</asp:RegularExpressionValidator>
                                     </InsertItemTemplate>
@@ -312,7 +323,7 @@
                                         <asp:TextBox ID="TextBox6" runat="server" Text='<%# Bind("nombre1_persona") %>'></asp:TextBox>
                                     </EditItemTemplate>
                                     <InsertItemTemplate>
-                                        <asp:TextBox ID="TextBox4" runat="server" Text='<%# Bind("nombre1_persona") %>' CssClass="form-control error"></asp:TextBox>
+                                        <asp:TextBox ID="TextBox4" runat="server" Text='<%# Bind("nombre1_persona") %>' CssClass="form-control error mayusculas"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="TextBox4" ErrorMessage="Debe ingresar el primer nombre" ForeColor="Red" ValidationGroup="insertarPersona">*</asp:RequiredFieldValidator>
                                         <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="TextBox4" ErrorMessage="Solo letras MAYÚSC" ForeColor="Blue" ValidationExpression="[A-Z]*" ValidationGroup="insertarPersona">*</asp:RegularExpressionValidator>
                                     </InsertItemTemplate>
@@ -326,7 +337,7 @@
                                         <asp:TextBox ID="TextBox7" runat="server" Text='<%# Bind("nombre2_persona") %>'></asp:TextBox>
                                     </EditItemTemplate>
                                     <InsertItemTemplate>
-                                        <asp:TextBox ID="TextBox5" runat="server" Text='<%# Bind("nombre2_persona") %>' CssClass="form-control error"></asp:TextBox>
+                                        <asp:TextBox ID="TextBox5" runat="server" Text='<%# Bind("nombre2_persona") %>' CssClass="form-control error mayusculas"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="TextBox5" ErrorMessage="Debe ingresar el segundo nombre" ForeColor="Red" ValidationGroup="insertarPersona">*</asp:RequiredFieldValidator>
                                         <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ControlToValidate="TextBox5" ErrorMessage="Solo letras MAYÚSC" ForeColor="Blue" ValidationExpression="[A-Z]*" ValidationGroup="insertarPersona">*</asp:RegularExpressionValidator>
                                     </InsertItemTemplate>
@@ -340,7 +351,7 @@
                                         <asp:TextBox ID="TextBox8" runat="server" Text='<%# Bind("direccion_persona") %>'></asp:TextBox>
                                     </EditItemTemplate>
                                     <InsertItemTemplate>
-                                        <asp:TextBox ID="TextBox6" runat="server" Text='<%# Bind("direccion_persona") %>' CssClass="form-control error"></asp:TextBox>
+                                        <asp:TextBox ID="TextBox6" runat="server" Text='<%# Bind("direccion_persona") %>' CssClass="form-control error mayusculas"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="TextBox6" ErrorMessage="Debe ingresar la direción" ForeColor="Red" ValidationGroup="insertarPersona">*</asp:RequiredFieldValidator>
                                         <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server" ControlToValidate="TextBox6" ErrorMessage="Solo letras MAYÚSC" ForeColor="Blue" ValidationExpression="[A-Z ]*" ValidationGroup="insertarPersona">*</asp:RegularExpressionValidator>
                                     </InsertItemTemplate>

@@ -1,7 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/home.Master" AutoEventWireup="true" CodeBehind="WFReservacion.aspx.cs" Inherits="GestionHotelera.WFReservacion" Culture="Auto" UICulture="Auto" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/home2.Master" AutoEventWireup="true" CodeBehind="wfh2ReservaCliente.aspx.cs" Inherits="GestionHotelera.wfh2ReservaCliente" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <title>Reservación</title>
+    <title>Reserva Cliente</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <section class="panel">

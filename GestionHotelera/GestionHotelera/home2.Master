@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="home.master.cs" Inherits="GestionHotelera.home" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="home2.master.cs" Inherits="GestionHotelera.home2" %>
 
 <!DOCTYPE html>
 
@@ -60,7 +60,7 @@
                 </div>
 
                 <!--logo start-->
-                <a href="inicio.aspx" class="logo">Gestión-<span class="lite">Hotelera</span></a>
+                <a href="inicio2.aspx" class="logo">Gestión-<span class="lite">Hotelera</span></a>
                 <!--logo end-->
 
                 <div class="nav search-row" id="top_menu">
@@ -320,13 +320,13 @@
                     <!-- sidebar menu start-->
                     <ul class="sidebar-menu">
                         <li class="">
-                            <a class="" href="inicio.aspx">
+                            <a class="" href="inicio2.aspx">
                                 <i class="icon_house_alt"></i>
                                 <span>Inicio</span>
                             </a>
                         </li>
 
-                        <li class="sub-menu">
+                        <%--<li class="sub-menu">
                             <a href="javascript:;" class="">
                                 <i class="icon_document_alt"></i>
                                 <span>Mantenimientos</span>
@@ -342,12 +342,8 @@
                                 <li><a class="" href="WFHabitacion.aspx">Habitación</a></li>                           
                                 <li><a class="" href="WFReservacion.aspx">Reservación</a></li> 
                                 <li><a class="" href="WFAlquiler.aspx">Alquiler</a></li>
-                                <li><a class="" href="WFCategoriaProducto.aspx">Categoría de Producto</a></li>
-                                <li><a class="" href="WFMarcasProductos.aspx">Marcas de Productos</a></li>
-                                <li><a class="" href="WFPedido.aspx">Pedido</a></li>
-                                <li><a class="" href="WFDetallePedido.aspx">Detalle Pedido</a></li>
                             </ul>
-                        </li>
+                        </li>--%>
                          <li class="sub-menu">
                             <a href="javascript:;" class="">
                                 <i class="icon_document_alt"></i>
@@ -355,34 +351,44 @@
                                 <span class="menu-arrow arrow_carrot-right"></span>
                             </a>
                             <ul class="sub">
-                                <li><a class="" href="WFReservacion.aspx">Reservar</a></li>
-                                <li><a class="" href="WFReservacion.aspx">Detalle Reserva</a></li>
+                                <li><a class="" href="wfh2ReservaCliente.aspx">Realizar reservación</a></li>
+                                <li><a class="" href="">Detalle Reserva</a></li>
                             </ul>
                         </li>
-                        <li class="sub-menu">
+                        <%--<li class="sub-menu">
                             <a href="javascript:;" class="">
                                 <i class="icon_document_alt"></i>
                                 <span>Menú Empleado</span>
                                 <span class="menu-arrow arrow_carrot-right"></span>
                             </a>
                             <ul class="sub">
-                                <li><a class="" href="WFHabitacion.aspx">Control Habitaciones</a></li>
-                                <li><a class="" href="WFPedido.aspx">Generar Nuevo Pedido</a></li>
-                                <li><a class="" href="WFDetallePedido.aspx">Tomar Detalle Pedido</a></li>
+                                <li><a class="" href="WFControlHabitaciones.aspx">Control Habitaciones</a></li>
                             </ul>
-                        </li>
+                        </li>--%>
+
                         <li class="sub-menu">
                             <a href="javascript:;" class="">
                                 <i class="icon_document_alt"></i>
-                                <span>Reportes</span>
+                                <span>Comprobantes</span>
                                 <span class="menu-arrow arrow_carrot-right"></span>
                             </a>
                             <ul class="sub">
-                                <li><a class="" href="WFReporteReservas.aspx">Reservas</a></li>
-                                <li><a class="" href="WFReporteComprobanteReserva.aspx">Comprobante individual</a></li>
-                                <li><a class="" href="WFReporteFactura.aspx">Factura</a></li>
+                                <li><a class="" href="wfh2ReporteComprobanteIndividual.aspx">Comprobante</a></li>
                             </ul>
                         </li>
+
+                        <li class="sub-menu">
+                            <a href="javascript:;" class="">
+                                <i class="icon_document_alt"></i>
+                                <span>Facturas</span>
+                                <span class="menu-arrow arrow_carrot-right"></span>
+                            </a>
+                            <ul class="sub">
+                                <li><a class="" href="wfh2ReporteFacturaCliente.aspx">Factura</a></li>
+                            </ul>
+                        </li>
+
+                        
 
                         <%--<li class="sub-menu">
                         <a href="javascript:;" class="">
@@ -448,9 +454,9 @@
                 <section class="wrapper">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h3 class="page-header"><i class="fa fa fa-bars"></i>ADMINISTRACIÓN</h3>
+                            <h3 class="page-header"><i class="fa fa fa-bars"></i>RESERVAS DE HABITACIONES</h3>
                             <ol class="breadcrumb">
-                                <li><i class="fa fa-home"></i><a href="inicio.aspx">Inicio</a></li>
+                                <li><i class="fa fa-home"></i><a href="inicio2.aspx">Inicio</a></li>
                                 <li><i class="fa fa-bars"></i>Paginas</li>
                                 <%--<li><i class="fa fa-square-o"></i>Pages</li>--%>
                             </ol>
@@ -471,7 +477,7 @@
             Licensing information: https://bootstrapmade.com/license/
             Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
           -->
-                    Realizado por: <a href="inicio.aspx">R.C.©P.I-6°"A"N©Todos los derechos Reservados</a>
+                    Realizado por: <a href="inicio2.aspx">R.C.©P.I-6°"A"N©Todos los derechos Reservados</a>
                 </div>
             </div>
         </section>
@@ -491,4 +497,3 @@
 </body>
 
 </html>
-

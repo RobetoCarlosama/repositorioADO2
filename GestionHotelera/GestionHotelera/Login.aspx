@@ -80,7 +80,7 @@
             Licensing information: https://bootstrapmade.com/license/
             Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
           -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                RC <a href="https://bootstrapmade.com/">@</a>
             </div>
         </div>
     </div>

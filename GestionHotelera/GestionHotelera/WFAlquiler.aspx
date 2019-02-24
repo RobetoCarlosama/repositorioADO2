@@ -13,7 +13,7 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Nueva reserva</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Nueva detalle de alquiler</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -22,7 +22,7 @@
                             <asp:DetailsView ID="DetailsView1" runat="server" Height="100%" Width="100%" AutoGenerateRows="False" DataKeyNames="id_alquiler" DataSourceID="sqldsArlquiler" DefaultMode="Insert" CssClass="table-responsive table-striped table-advance table-hover" GridLines="None" HorizontalAlign="Center">
                                 <Fields>
                                     <asp:BoundField DataField="id_alquiler" HeaderText="id_alquiler" InsertVisible="False" ReadOnly="True" SortExpression="id_alquiler" Visible="False" />
-                                    <asp:TemplateField HeaderText="Cliente" SortExpression="Cliente">
+                                    <asp:TemplateField HeaderText="CLIENTE" SortExpression="Cliente">
                                         <EditItemTemplate>
                                             <asp:Label ID="Label1" runat="server" Text='<%# Eval("Cliente") %>'></asp:Label>
                                         </EditItemTemplate>
@@ -41,7 +41,7 @@
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                     <asp:BoundField DataField="id_persona" HeaderText="id_persona" SortExpression="id_persona" Visible="False" />
-                                    <asp:TemplateField HeaderText="fecha entrada" SortExpression="fechaentrada_alquiler">
+                                    <asp:TemplateField HeaderText="FECHA DE ENTRADA" SortExpression="fechaentrada_alquiler">
                                         <EditItemTemplate>
                                             <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("fechaentrada_alquiler") %>'></asp:TextBox>
                                         </EditItemTemplate>
@@ -54,7 +54,7 @@
                                             <asp:Label ID="Label1" runat="server" Text='<%# Bind("fechaentrada_alquiler") %>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:TemplateField HeaderText="hora entrada" SortExpression="horaentrada_alquiler">
+                                    <asp:TemplateField HeaderText="HORA DE ENTRADA" SortExpression="horaentrada_alquiler">
                                         <EditItemTemplate>
                                             <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("horaentrada_alquiler") %>'></asp:TextBox>
                                         </EditItemTemplate>
@@ -92,7 +92,7 @@
                                             <asp:Label ID="Label2" runat="server" Text='<%# Bind("horaentrada_alquiler") %>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:TemplateField HeaderText="fecha salida" SortExpression="fechasalida_alquiler">
+                                    <asp:TemplateField HeaderText="FECHA DE SALIDA" SortExpression="fechasalida_alquiler">
                                         <EditItemTemplate>
                                             <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("fechasalida_alquiler") %>'></asp:TextBox>
                                         </EditItemTemplate>
@@ -105,7 +105,7 @@
                                             <asp:Label ID="Label3" runat="server" Text='<%# Bind("fechasalida_alquiler") %>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:TemplateField HeaderText="hora salida" SortExpression="horasalida_alquiler">
+                                    <asp:TemplateField HeaderText="HORA DE SALIDA" SortExpression="horasalida_alquiler">
                                         <EditItemTemplate>
                                             <asp:TextBox ID="TextBox4" runat="server" Text='<%# Bind("horasalida_alquiler") %>'></asp:TextBox>
                                         </EditItemTemplate>
@@ -178,7 +178,7 @@
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:BoundField DataField="id_alquiler" HeaderText="#" InsertVisible="False" ReadOnly="True" SortExpression="id_alquiler" />
-                    <asp:TemplateField HeaderText="Cliente" SortExpression="Cliente">
+                    <asp:TemplateField HeaderText="CLIENTE" SortExpression="Cliente">
                         <EditItemTemplate>
                             <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="sqldsListarPersonas" DataTextField="Persona" DataValueField="id_persona" SelectedValue='<%# Bind("id_persona") %>' Width="95%">
                             </asp:DropDownList>
@@ -193,7 +193,7 @@
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:BoundField DataField="id_persona" HeaderText="id_persona" SortExpression="id_persona" Visible="False" />
-                    <asp:TemplateField HeaderText="fecha-entrada" SortExpression="fechaentrada_alquiler">
+                    <asp:TemplateField HeaderText="F-ENTRADA" SortExpression="fechaentrada_alquiler">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("fechaentrada_alquiler") %>'></asp:TextBox>
                             <ajaxToolkit:CalendarExtender ID="TextBox1_CalendarExtender" runat="server" CssClass="black" TargetControlID="TextBox1" StartDate="<%# DateTime.Now.Date %>" />
@@ -202,7 +202,7 @@
                             <asp:Label ID="Label2" runat="server" Text='<%# Bind("fechaentrada_alquiler") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="hora-entrada" SortExpression="horaentrada_alquiler">
+                    <asp:TemplateField HeaderText="H-SALIDA" SortExpression="horaentrada_alquiler">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("horaentrada_alquiler") %>' Width="60px"></asp:TextBox>
                         </EditItemTemplate>
@@ -210,7 +210,7 @@
                             <asp:Label ID="Label3" runat="server" Text='<%# Bind("horaentrada_alquiler") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="fecha-salida" SortExpression="fechasalida_alquiler">
+                    <asp:TemplateField HeaderText="F-SALIDA" SortExpression="fechasalida_alquiler">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("fechasalida_alquiler") %>'></asp:TextBox>
                             <ajaxToolkit:CalendarExtender ID="TextBox3_CalendarExtender" runat="server" TargetControlID="TextBox3" StartDate="<%# DateTime.Now.Date %>" CssClass="black" />
@@ -219,7 +219,7 @@
                             <asp:Label ID="Label4" runat="server" Text='<%# Bind("fechasalida_alquiler") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="hora-salida" SortExpression="horasalida_alquiler">
+                    <asp:TemplateField HeaderText="H-SALIDA" SortExpression="horasalida_alquiler">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox4" runat="server" Text='<%# Bind("horasalida_alquiler") %>' Width="60px"></asp:TextBox>
                         </EditItemTemplate>
@@ -227,7 +227,7 @@
                             <asp:Label ID="Label5" runat="server" Text='<%# Bind("horasalida_alquiler") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="creación" SortExpression="creacion_alquiler">
+                    <asp:TemplateField HeaderText="CREACI&#211;N" SortExpression="creacion_alquiler">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox5" runat="server" Text='<%# Bind("creacion_alquiler") %>' ReadOnly="True" Width="95px"></asp:TextBox>
                         </EditItemTemplate>
@@ -235,7 +235,7 @@
                             <asp:Label ID="Label6" runat="server" Text='<%# Bind("creacion_alquiler") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="actualización" SortExpression="actualizacion_alquiler">
+                    <asp:TemplateField HeaderText="ACTUALIZACI&#211;N" SortExpression="actualizacion_alquiler">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox6" runat="server" Text='<%# Bind("actualizacion_alquiler") %>' ReadOnly="True" Width="95px"></asp:TextBox>
                         </EditItemTemplate>
@@ -243,7 +243,7 @@
                             <asp:Label ID="Label7" runat="server" Text='<%# Bind("actualizacion_alquiler") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="estado" SortExpression="estado_alquiler">
+                    <asp:TemplateField HeaderText="ESTADO" SortExpression="estado_alquiler">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox7" runat="server" Text='<%# Bind("estado_alquiler") %>' ReadOnly="True" Width="50px"></asp:TextBox>
                         </EditItemTemplate>

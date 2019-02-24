@@ -18,10 +18,10 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="id_rol" DataSourceID="sqldsRoles" DefaultMode="Insert" Height="50px" Width="125px" CssClass="table table-striped table-advance table-hover" HorizontalAlign="Center" GridLines="None">
+                            <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="id_rol" DataSourceID="sqldsRoles" DefaultMode="Insert" Height="100%" Width="100%" CssClass="table-responsive table-striped table-advance table-hover" HorizontalAlign="Center" GridLines="None">
                 <Fields>
                     <asp:BoundField DataField="id_rol" HeaderText="id_rol" InsertVisible="False" ReadOnly="True" SortExpression="id_rol" Visible="False" />
-                    <asp:TemplateField HeaderText="descripcion" SortExpression="descripcion_rol">
+                    <asp:TemplateField HeaderText="DESCRIPCION DEL ROL" SortExpression="descripcion_rol">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("descripcion_rol") %>'></asp:TextBox>
                         </EditItemTemplate>
@@ -70,7 +70,7 @@
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:BoundField DataField="id_rol" HeaderText="#" InsertVisible="False" ReadOnly="True" SortExpression="id_rol" />
-                    <asp:TemplateField HeaderText="descripción" SortExpression="descripcion_rol">
+                    <asp:TemplateField HeaderText="DESCRIPCIÓN" SortExpression="descripcion_rol">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox1" runat="server" MaxLength="30" Text='<%# Bind("descripcion_rol") %>'></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Rol, campo requerido" ForeColor="Red" ValidationGroup="actualizaRol">*</asp:RequiredFieldValidator>
@@ -81,7 +81,7 @@
                             <asp:Label ID="Label1" runat="server" Text='<%# Bind("descripcion_rol") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="creación" SortExpression="creacion_rol">
+                    <asp:TemplateField HeaderText="CREACIÓN" SortExpression="creacion_rol">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox2" runat="server" ReadOnly="True" Text='<%# Bind("creacion_rol") %>'></asp:TextBox>
                         </EditItemTemplate>
@@ -89,7 +89,7 @@
                             <asp:Label ID="Label2" runat="server" Text='<%# Bind("creacion_rol") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="actualización" SortExpression="actualizacion_rol">
+                    <asp:TemplateField HeaderText="ACTUALIZACIÓN" SortExpression="actualizacion_rol">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox3" runat="server" ReadOnly="True" Text='<%# Bind("actualizacion_rol") %>'></asp:TextBox>
                         </EditItemTemplate>
@@ -97,7 +97,7 @@
                             <asp:Label ID="Label3" runat="server" Text='<%# Bind("actualizacion_rol") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="estado" SortExpression="estado_rol">
+                    <asp:TemplateField HeaderText="ESTADO" SortExpression="estado_rol">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox4" runat="server" ReadOnly="True" Text='<%# Bind("estado_rol") %>'></asp:TextBox>
                         </EditItemTemplate>
